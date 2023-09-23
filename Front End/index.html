@@ -4,19 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Sunrise</title>
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="css/style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-<body>
-    <div class="container">
-        <nav class="navbar-bg-body-tertiary">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">
+    <!-- <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<body class="page-body">
+    <div class="my-container">
+        <nav class="my-navbar-bg-body-tertiary">
+            <div class="my-container-fluid">
+              <a class="my-navbar-brand" href="#">
                 <img src="assets/Logo.png" alt="Logo" width="80" height="" class="logo">
             </a>
-            <div class="nav">
-                <button class="btn-login">Login</button>
-                <button class="btn-signUp">Sign Up</button>
+            <div class="my-nav">
+                <button class="my-btn-login">Login</button>
+                <button class="my-btn-signUp">Sign Up</button>
             </div>
             </div>
           </nav>
@@ -25,7 +33,7 @@
             <div class="image">
                 <div class="search">
                     <input id="searchbar-text" class="search-bar" type="text" placeholder="Search Location Here" >
-                    <i id="secrch-icon" class='bx bx-search-alt-2'></i>
+                    <i onclick="findCity()" id="secrch-icon" class='bx bx-search-alt-2'></i>
                 </div>
             
             <div class="weather-deatils">
@@ -278,10 +286,24 @@
         </section>
         <section class="section4">
             <div class="section4-div">
-                <div class="map"></div>
+                <div class="map">
+                    <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63397.333762227034!2d79.88823614334623!3d6.729119718216145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae24616c169e7c3%3A0xd21e80c970651d56!2sPanadura!5e0!3m2!1sen!2slk!4v1695483871400!5m2!1sen!2slk" width="610" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+                </div>
                 <div class="calender">
                     <h3>History</h3>
                     <hr>
+                    <div class="form-group">
+                        <div class='input-group date' id='datetimepicker1'>
+                            <input type='text' class="form-control" />
+                            <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                  
+
                 </div>
             </div>
         </section>
@@ -360,7 +382,13 @@
     
 
     </div>
-    
+    <script type="text/javascript">
+        $(function() {
+            $('#datetimepicker1').datetimepicker();
+        });
+    </script>
+
+<!-- <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script> -->
 <script src="js/app.js"></script>
     
 </body>

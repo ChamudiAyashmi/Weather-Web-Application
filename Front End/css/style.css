@@ -4,34 +4,32 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    background-color: #003049;
+.page-body{
+    background-color: #2B2D42;
     /* background: linear-gradient(143.03deg, #333F52 1.37%, rgba(29, 51, 84, 0) 78.53%);  */
     position: relative;
     width: 100%;
     height: 3250px;
 }
-/* .container{
-    border: 1px solid white;
-} */
-.navbar-bg-body-tertiary{
+
+.my-navbar-bg-body-tertiary{
     position: sticky;
 
 }
-.container-fluid{
+.my-container-fluid{
     display: flex; 
     flex-direction: row;
     justify-content: space-between;
 }
-.navbar-brand{
+.my-navbar-brand{
     margin-left: 2%;
 }
-.nav{
+.my-nav{
     display: flex;
     margin-top: 1%;
     margin-right: 5%;
 }
-.btn-signUp{
+.my-btn-signUp{
     margin-top: 1%;
     margin-left: 8%;
     width: 150px;
@@ -43,7 +41,7 @@ body{
     background: #580AFF;
     color: white;
 }
-.btn-login{
+.my-btn-login{
     margin-top: 1%;
     width: 80px;
     height: 42px;
@@ -345,6 +343,9 @@ table td img{
    background: rgba(255, 255, 255, 0.1);
    box-shadow: 10px 4px 4px rgba(0, 0, 0, 0.25);
    border-radius: 15px;
+}
+.map iframe{
+    border-radius: 15px;
 }
 .calender{
     /* border: 1px solid white; */
