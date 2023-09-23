@@ -147,14 +147,14 @@ label{
     flex-direction: row;
 }
 .today-highlights{
-    width: 80%;
+    width: 70%;
     height: 510px;
     background: rgba(255, 255, 255, 0.1);
     box-shadow: 10px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 15px; 
 }
 .forecast{
-    width: 40%;
+    width: 50%;
     height: 510px;
     margin-left: 3%;
     background: rgba(255, 255, 255, 0.1);
@@ -181,7 +181,7 @@ label{
     display: flex;
 }
 .temperature{
-    width: 40%;
+    width: 50%;
     margin: 3%;
     height: 161.99px;
     background: rgba(217, 217, 217, 0.22);
@@ -230,6 +230,24 @@ label{
     margin-bottom: 2%;
     font-size: 35px;
     
+}
+table{
+    width: 100%;
+    margin-left: 3%;
+    /* margin-right: 3%; */
+    margin-top: 3%;
+}
+table tr{
+    height: 25px;
+}
+table td{
+    color: white;
+    /* padding: 1%; */
+    padding-top: 3%;
+    font-size: 20px;
+}
+table td img{
+    width: 40px;
 }
 .forecast hr{
     margin-left: 5%;
