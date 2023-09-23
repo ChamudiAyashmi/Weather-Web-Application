@@ -91,31 +91,39 @@
     cursor: pointer;
 }
 .weather-deatils{
-
+    border: 1px solid white;
     display: flex;
     margin-top: 250px;
 
 }
+.location{
+    width: 50%;
+    /* display: flex; */
+}
 .lbl-location{
-    margin-left: -10px;
+    /* margin-left: -10px; */
+    border: 1px solid white;
 }
 .local-time{
-    margin-left: 68%;
+    /* margin-left: 65%; */
     margin-top: 1%;
+    border: 1px solid white;
 }
 label{
     color: white;
     font-size: 30px;
+    /* border: 1px solid white; */
 }
 .sun{
-    width: 60px;
-    height: 60px;
-    position: absolute;
-    margin-left: -7%;
+    width: 50px;
+    height: 50px;
+    /* position: absolute; */
+    margin-left: 20px;
     margin-top: -10px;
 }
 .temp{
     font-size: 50px;
+    border: 1px solid white;
 }
 .search{
     display: flex;
