@@ -12,15 +12,6 @@ const currentDay =document.getElementById("day");
 currentDay.textContent = dayList[today];
 
 
-// function findCity(){
-//   const searchIcon = document.getElementById("secrch-icon");
-//   const cityName = document.getElementById("cityName");
-//   const searchbarValue = document.getElementById("searchbar-text");
-//   cityName.innerText = searchbarValue.value;
-// }
-
-const cityName = $("#cityName");
-
 // function searchIconOnclick(){
 //   const searchbar = $("#searchbar-text");
 //   var typedText = searchbar.val();
@@ -28,7 +19,40 @@ const cityName = $("#cityName");
 //   cityName.text(typedText);
 // }
 
+const locationA = document.getElementById("cityName").textContent;
+console.log(locationA);
+// console.log(cityName.text);
 
+const cityName = $("#cityName");
+const currentLocationTemperature = $("#current-loc-temperarure");
+const temperature = $("#lblTemperature");
+const humidity = $("#lblHumidity");
+const windSpeed = $("#lblWindSpeed");
+const uv = $("#lblUv");
+const visibility = $("#lblVisibility");
+const pressure = $("#lblPressure");
+
+function searchIconOnclick(){
+  const searchbar = $("#searchbar-text");
+  var typedText = searchbar.val();
+
+  $.ajax({
+    method : "GET",
+    url : `http://api.weatherapi.com/v1/current.json?key=89cc63fe3a254352b8d132020231609 &q=${typedText}`,
+    success : (resp) => {
+    console.log(resp);
+    console.log(resp.current.temp_c +"℃");
+    cityName.text(resp.location.name);
+    currentLocationTemperature.text(resp.current.temp_c+ "℃");
+    temperature.text(resp.current.temp_c+ "℃");
+    humidity.text(resp.current.humidity+"%");
+    windSpeed.text(resp.current.wind_kph+"kph")
+    uv.text(resp.current.uv);
+    visibility.text(resp.current.vis_km+"km");
+    pressure.text(resp.current.pressure_mb +"hPa");
+    }
+  })
+}
 
 function location1(){
   const successs = (position)=>{
@@ -39,7 +63,7 @@ function location1(){
       method : "GET",
       url : loca,
       success:(resp)=>{
-        console.log(resp);
+        // console.log(resp);
         cityName.text(resp.locality)
     
       }

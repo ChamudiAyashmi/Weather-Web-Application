@@ -45,6 +45,10 @@ body.light{
     background: #580AFF;
     color: white;
     cursor: pointer;
+    border: none;
+}
+.my-btn-signUp:hover{
+    border: 1px solid white;
 }
 .my-btn-login{
     margin-top: 1%;
@@ -123,39 +127,39 @@ body.light{
     cursor: pointer;
 }
 .weather-deatils{
-    border: 1px solid white;
     display: flex;
     margin-top: 250px;
 
 }
 .location{
     width: 50%;
-    /* display: flex; */
-}
-.lbl-location{
-    /* margin-left: -10px; */
-    border: 1px solid white;
 }
 .local-time{
-    /* margin-left: 65%; */
+    margin-left: 35%;
     margin-top: 1%;
-    border: 1px solid white;
+    /* border: 1px solid white; */
 }
 label{
     color: white;
     font-size: 30px;
     /* border: 1px solid white; */
 }
+.div-img{
+    /* border: 1px solid white; */
+    display: flex;
+    flex-direction: row;
+}
 .sun{
-    width: 50px;
-    height: 50px;
-    /* position: absolute; */
-    margin-left: 20px;
-    margin-top: -10px;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    margin-left: 155px;
+    margin-top: -1px;
+    /* border: 1px solid white; */
 }
 .temp{
     font-size: 50px;
-    border: 1px solid white;
+    /* border: 1px solid white; */
 }
 .search{
     display: flex;
@@ -180,7 +184,6 @@ label{
     margin-right: 3%;
     padding-left: 3%;
     padding-right: 3%;
-
     display: flex;
     flex-direction: row;
 }
@@ -225,6 +228,9 @@ label{
     background: rgba(217, 217, 217, 0.22);
     box-shadow: 5px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 15px;
+}
+.temperature:hover{
+    border: 1px solid white;
 }
 
 .temperature h4{
@@ -331,6 +337,9 @@ table td img{
     box-shadow: 5px 8px 4px rgba(0, 0, 0, 0.25);
     border-radius: 15px;
 }
+.weather-data:hover{
+    border: 1px solid white;
+}
 .date{
     /* border: 1px solid white; */
     height: 25%;
@@ -388,14 +397,24 @@ table td img{
     border-radius: 15px;
 }
 .calender{
-    /* border: 1px solid white; */
     width: 80%;
     margin-left: 3%;
     margin-right: 7%;
     background: rgba(255, 255, 255, 0.1);
     box-shadow: 10px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 15px; 
-
+}
+.form-group{
+    margin: 3%;
+    height: 7%;
+}
+.form-group input{
+    width: 50%;
+    height: 100%;
+    margin-left: 3%;
+    border-radius: 5px;
+    font-size: 20px;
+    border: none;
 }
 .calender h3{
     color: white;
@@ -426,6 +445,9 @@ table td img{
     box-shadow: 10px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 15px; 
 }
+.starter:hover{
+    border: 1px solid white;
+}
 .pro{
     width: 25%;
     height: 500px;
@@ -434,6 +456,9 @@ table td img{
     background: rgba(255, 255, 255, 0.1);
     box-shadow: 10px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 15px;   
+}
+.pro:hover{
+    border: 1px solid white;
 }
 .hedding{
     /* border: 1px solid white; */
