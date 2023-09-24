@@ -21,39 +21,46 @@ currentDay.textContent = dayList[today];
 
 const cityName = $("#cityName");
 
-function findCity(){
-  const searchbar = $("#searchbar-text");
-  var typedText = searchbar.val();
-  const cityName = $("#cityName");
-  cityName.text(typedText);
-}
+// function searchIconOnclick(){
+//   const searchbar = $("#searchbar-text");
+//   var typedText = searchbar.val();
+//   const cityName = $("#cityName");
+//   cityName.text(typedText);
+// }
+
 
 
 function location1(){
   const successs = (position)=>{
     const latitude = position.coords.latitude;
     const longitude = position.coords.longitude;
-    const loc = `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${latitude}&longitude=${longitude}&localityLanguage=en`;
+    const loca = `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${latitude}&longitude=${longitude}&localityLanguage=en`;
     $.ajax({
       method : "GET",
-      url : loc,
-      success:(res)=>{
-        cityName.text(res.locality)
+      url : loca,
+      success:(resp)=>{
+        console.log(resp);
+        cityName.text(resp.locality)
     
       }
     })
   }
+
+  const error=()=>{
+    console.log("ghghgfgf");
+  }
   navigator.geolocation.getCurrentPosition(successs,error)
 }
 
-$.ajax({
-  method : "GET",
-  url : loc,
-  success:(res)=>{
-    cityName.text(res.locality)
+location1();
 
-  }
+const body = document.querySelector("body")
+toggle = document.querySelector(".toggle")
+
+
+
+toggle.addEventListener("click", ()=>{
+    body.classList.toggle("light");
 })
 
-
-location1();
+toggle.addEventListener("click", ()=> toggle.classList.toggle("active"));
