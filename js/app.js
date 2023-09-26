@@ -11,6 +11,18 @@ const dayList = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Sa
 const currentDay =document.getElementById("day");
 currentDay.textContent = dayList[today];
 
+
+const currentDate = new Date();
+let d = currentDate.getDate()-4;
+console.log(currentDate.getDate()-4);
+let startDate = currentDate.getFullYear()+"-"+currentDate.getMonth()+"-"+currentDate.getDate();
+let endDate = currentDate.getFullYear()+"-"+currentDate.getMonth()+"-"+d;
+
+console.log(startDate);
+console.log(endDate);
+
+
+
 //----------------------set current weather data----------------------------
 
 const cityName = $("#cityName");
@@ -22,6 +34,8 @@ const windSpeed = $("#lblWindSpeed");
 const uv = $("#lblUv");
 const visibility = $("#lblVisibility");
 const pressure = $("#lblPressure");
+
+//---------------------set weather forecast-----------------------------
 
 const forecastDay1 =$("#day1");
 const forecastDay1Img =$("#day1-img");
@@ -52,6 +66,25 @@ const forecastDay5Img =$("#day5-img");
 const forecastDay5Temp =$("#day5-temp");
 const forecastDay5Humidity =$("#day5-humidity");
 const forecastDay5Visibility =$("#day5-visibility");
+
+//----------------------------set history weather data---------------------------
+
+
+const historyDay1 = $("#history-day1");
+const historyDay2 = $("#history-day2");
+const historyDay3 = $("#history-day3");
+const historyDay4 = $("#history-day4");
+const historyDay5 = $("#history-day5");
+const historyDay6 = $("#history-day6");
+const historyDay7 = $("#history-day7");
+
+const historyDay1Temp = $("#history-day1-temp");
+const historyDay2Temp = $("#history-day2-temp");
+const historyDay3Temp = $("#history-day3-temp");
+const historyDay4Temp = $("#history-day4-temp");
+const historyDay5Temp = $("#history-day5-temp");
+const historyDay6Temp = $("#history-day6-temp");
+const historyDay7Temp = $("#history-day7-temp");
 
 function searchIconOnclick(){
   const searchbar = $("#searchbar-text");
@@ -84,9 +117,9 @@ const searchUrl = "http://api.weatherapi.com/v1/search.json?key=89cc63fe3a254352
 
 const currentUrl = "http://api.weatherapi.com/v1/current.json?key=89cc63fe3a254352b8d132020231609&q="
 
-const forecastUrl = "https://api.weatherapi.com/v1/forecast.json?key=89cc63fe3a254352b8d132020231609&days=5&q="
+const forecastUrl = "https://api.weatherapi.com/v1/forecast.json?key=89cc63fe3a254352b8d132020231609&days=6&q="
 
-const historyUrl = "http://api.weatherapi.com/v1/history.json?key=89cc63fe3a254352b8d132020231609&date=2023-09-19&q=panadura"
+const historyUrl = "https://api.weatherapi.com/v1/history.json?&dt=2023-09-20&end_dt=2023-09-26&key=89cc63fe3a254352b8d132020231609&q=panadura"
 
 let city;
 
@@ -162,35 +195,35 @@ async function setWeather(cityName) {
       url: forecastUrl + cityName,
     });
     console.log(weatherForecastResponse);
-    let date1 = weatherForecastResponse['forecast']['forecastday'][0]['date'];
-    let date1Img = weatherForecastResponse['forecast']['forecastday'][0]['day']['condition']['icon'];
-    let date1Temp = weatherForecastResponse['forecast']['forecastday'][0]['day']['avgtemp_c'];
-    let date1Humidity = weatherForecastResponse['forecast']['forecastday'][0]['day']['avghumidity'];
-    let date1Visibility = weatherForecastResponse['forecast']['forecastday'][0]['day']['avgvis_km'];
+    let date1 = weatherForecastResponse['forecast']['forecastday'][1]['date'];
+    let date1Img = weatherForecastResponse['forecast']['forecastday'][1]['day']['condition']['icon'];
+    let date1Temp = weatherForecastResponse['forecast']['forecastday'][1]['day']['avgtemp_c'];
+    let date1Humidity = weatherForecastResponse['forecast']['forecastday'][1]['day']['avghumidity'];
+    let date1Visibility = weatherForecastResponse['forecast']['forecastday'][1]['day']['avgvis_km'];
 
-    let date2 = weatherForecastResponse['forecast']['forecastday'][1]['date'];
-    let date2Img = weatherForecastResponse['forecast']['forecastday'][1]['day']['condition']['icon'];
-    let date2Temp = weatherForecastResponse['forecast']['forecastday'][1]['day']['avgtemp_c'];
-    let date2Humidity = weatherForecastResponse['forecast']['forecastday'][1]['day']['avghumidity'];
-    let date2Visibility = weatherForecastResponse['forecast']['forecastday'][1]['day']['avgvis_km'];
+    let date2 = weatherForecastResponse['forecast']['forecastday'][2]['date'];
+    let date2Img = weatherForecastResponse['forecast']['forecastday'][2]['day']['condition']['icon'];
+    let date2Temp = weatherForecastResponse['forecast']['forecastday'][2]['day']['avgtemp_c'];
+    let date2Humidity = weatherForecastResponse['forecast']['forecastday'][2]['day']['avghumidity'];
+    let date2Visibility = weatherForecastResponse['forecast']['forecastday'][2]['day']['avgvis_km'];
 
-    let date3 = weatherForecastResponse['forecast']['forecastday'][2]['date'];
-    let date3Img = weatherForecastResponse['forecast']['forecastday'][2]['day']['condition']['icon'];
-    let date3Temp = weatherForecastResponse['forecast']['forecastday'][2]['day']['avgtemp_c'];
-    let date3Humidity = weatherForecastResponse['forecast']['forecastday'][2]['day']['avghumidity'];
-    let date3Visibility = weatherForecastResponse['forecast']['forecastday'][2]['day']['avgvis_km'];
+    let date3 = weatherForecastResponse['forecast']['forecastday'][3]['date'];
+    let date3Img = weatherForecastResponse['forecast']['forecastday'][3]['day']['condition']['icon'];
+    let date3Temp = weatherForecastResponse['forecast']['forecastday'][3]['day']['avgtemp_c'];
+    let date3Humidity = weatherForecastResponse['forecast']['forecastday'][3]['day']['avghumidity'];
+    let date3Visibility = weatherForecastResponse['forecast']['forecastday'][3]['day']['avgvis_km'];
 
-    let date4 = weatherForecastResponse['forecast']['forecastday'][3]['date'];
-    let date4Img = weatherForecastResponse['forecast']['forecastday'][3]['day']['condition']['icon'];
-    let date4Temp = weatherForecastResponse['forecast']['forecastday'][3]['day']['avgtemp_c'];
-    let date4Humidity = weatherForecastResponse['forecast']['forecastday'][3]['day']['avghumidity'];
-    let date4Visibility = weatherForecastResponse['forecast']['forecastday'][3]['day']['avgvis_km'];
+    let date4 = weatherForecastResponse['forecast']['forecastday'][4]['date'];
+    let date4Img = weatherForecastResponse['forecast']['forecastday'][4]['day']['condition']['icon'];
+    let date4Temp = weatherForecastResponse['forecast']['forecastday'][4]['day']['avgtemp_c'];
+    let date4Humidity = weatherForecastResponse['forecast']['forecastday'][4]['day']['avghumidity'];
+    let date4Visibility = weatherForecastResponse['forecast']['forecastday'][4]['day']['avgvis_km'];
 
-    let date5 = weatherForecastResponse['forecast']['forecastday'][4]['date'];
-    let date5Img = weatherForecastResponse['forecast']['forecastday'][4]['day']['condition']['icon'];
-    let date5Temp = weatherForecastResponse['forecast']['forecastday'][4]['day']['avgtemp_c'];
-    let date5Humidity = weatherForecastResponse['forecast']['forecastday'][4]['day']['avghumidity'];
-    let date5Visibility = weatherForecastResponse['forecast']['forecastday'][4]['day']['avgvis_km'];
+    let date5 = weatherForecastResponse['forecast']['forecastday'][5]['date'];
+    let date5Img = weatherForecastResponse['forecast']['forecastday'][5]['day']['condition']['icon'];
+    let date5Temp = weatherForecastResponse['forecast']['forecastday'][5]['day']['avgtemp_c'];
+    let date5Humidity = weatherForecastResponse['forecast']['forecastday'][5]['day']['avghumidity'];
+    let date5Visibility = weatherForecastResponse['forecast']['forecastday'][5]['day']['avgvis_km'];
     
     forecastDay1.text(date1);
     forecastDay1Img.attr("src",date1Img);
@@ -235,7 +268,21 @@ async function setWeather(cityName) {
     console.log("History Weather");
     console.log(historyWeatherResponse);
 
+    historyDay1.text(historyWeatherResponse.forecast.forecastday[6].date);
+    historyDay2.text(historyWeatherResponse.forecast.forecastday[5].date);
+    historyDay3.text(historyWeatherResponse.forecast.forecastday[4].date);
+    historyDay4.text(historyWeatherResponse.forecast.forecastday[3].date);
+    historyDay5.text(historyWeatherResponse.forecast.forecastday[2].date);
+    historyDay6.text(historyWeatherResponse.forecast.forecastday[1].date);
+    historyDay7.text(historyWeatherResponse.forecast.forecastday[0].date);
 
+    historyDay1Temp.text(historyWeatherResponse.forecast.forecastday[6].day.avgtemp_c+"℃");
+    historyDay2Temp.text(historyWeatherResponse.forecast.forecastday[5].day.avgtemp_c+"℃");
+    historyDay3Temp.text(historyWeatherResponse.forecast.forecastday[4].day.avgtemp_c+"℃");
+    historyDay4Temp.text(historyWeatherResponse.forecast.forecastday[3].day.avgtemp_c+"℃");
+    historyDay5Temp.text(historyWeatherResponse.forecast.forecastday[2].day.avgtemp_c+"℃");
+    historyDay6Temp.text(historyWeatherResponse.forecast.forecastday[1].day.avgtemp_c+"℃");
+    historyDay7Temp.text(historyWeatherResponse.forecast.forecastday[0].day.avgtemp_c+"℃");
 
   } catch (error) {
     console.error("Error fetching weather data:", error);
