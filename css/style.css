@@ -279,7 +279,7 @@ table{
     width: 100%;
     margin-left: 3%;
     /* margin-right: 3%; */
-    margin-top: 3%;
+    /* margin-top: %; */
 }
 table tr{
     height: 25px;
@@ -291,7 +291,7 @@ table td{
     font-size: 20px;
 }
 table td img{
-    width: 40px;
+    width: 60px;
 }
 .forecast hr{
     margin-left: 5%;
@@ -513,4 +513,15 @@ table td img{
     background: #580AFF;
     border-radius: 15px;
     border: none;
+}
+.light{
+    background-color: white;
+    color: black;
+}
+.font-change{
+    color: black;
+}
+
+.dark{
+    background-color: gray;
 }
