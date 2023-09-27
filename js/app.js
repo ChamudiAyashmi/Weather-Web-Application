@@ -11,16 +11,30 @@ const dayList = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Sa
 const currentDay =document.getElementById("day");
 currentDay.textContent = dayList[today];
 
+//----------------------Get current Date-----------------------------
+const dateToday = new Date();
+var year1 = dateToday.getFullYear();
+var month1 = String(dateToday.getMonth() + 1).padStart(2, '0'); // Adding 1 to month because it is zero-based
+var day1 = String(dateToday.getDate()).padStart(2, '0');
+var formattedDateToday = year1 + '-' + month1 + '-' + day1;
 
-const currentDate = new Date();
-let d = currentDate.getDate()-4;
-console.log(currentDate.getDate()-4);
-let startDate = currentDate.getFullYear()+"-"+currentDate.getMonth()+"-"+currentDate.getDate();
-let endDate = currentDate.getFullYear()+"-"+currentDate.getMonth()+"-"+d;
+console.log(formattedDateToday);
 
-console.log(startDate);
-console.log(endDate);
+//----------------------Get seven Days ago date-------------------------
 
+var currenDate = new Date();
+
+// Subtract 7 days (7 * 24 * 60 * 60 * 1000 milliseconds) from the current date
+var sevenDaysAgo = new Date(currenDate.getTime() - 7 * 24 * 60 * 60 * 1000);
+
+// Extract the year, month, and day components from the sevenDaysAgo date
+var year = sevenDaysAgo.getFullYear();
+var month = String(sevenDaysAgo.getMonth() + 1).padStart(2, '0'); // Adding 1 to month because it is zero-based
+var day = String(sevenDaysAgo.getDate()).padStart(2, '0');
+
+// Create the "yyyy-mm-dd" formatted string
+var formattedDate = year + '-' + month + '-' + day;
+console.log(formattedDate);
 
 
 //----------------------set current weather data----------------------------
@@ -86,6 +100,14 @@ const historyDay5Temp = $("#history-day5-temp");
 const historyDay6Temp = $("#history-day6-temp");
 const historyDay7Temp = $("#history-day7-temp");
 
+const historyDay1Img = $("#pre-day1-img");
+const historyDay2Img = $("#pre-day2-img");
+const historyDay3Img = $("#pre-day3-img");
+const historyDay4Img = $("#pre-day4-img");
+const historyDay5Img = $("#pre-day5-img");
+const historyDay6Img = $("#pre-day6-img");
+const historyDay7Img = $("#pre-day7-img");
+
 function searchIconOnclick(){
   const searchbar = $("#searchbar-text");
   var typedText = searchbar.val();
@@ -119,7 +141,7 @@ const currentUrl = "http://api.weatherapi.com/v1/current.json?key=89cc63fe3a2543
 
 const forecastUrl = "https://api.weatherapi.com/v1/forecast.json?key=89cc63fe3a254352b8d132020231609&days=6&q="
 
-const historyUrl = "https://api.weatherapi.com/v1/history.json?&dt=2023-09-20&end_dt=2023-09-26&key=89cc63fe3a254352b8d132020231609&q=panadura"
+const historyUrl = `https://api.weatherapi.com/v1/history.json?&dt=${formattedDate}&end_dt=${formattedDateToday}&key=89cc63fe3a254352b8d132020231609&q=`
 
 let city;
 
@@ -263,7 +285,7 @@ async function setWeather(cityName) {
   try {
     const historyWeatherResponse = await $.ajax({
       method: "GET",
-      url: historyUrl,
+      url: historyUrl + cityName,
     });
     console.log("History Weather");
     console.log(historyWeatherResponse);
@@ -283,6 +305,15 @@ async function setWeather(cityName) {
     historyDay5Temp.text(historyWeatherResponse.forecast.forecastday[2].day.avgtemp_c+"℃");
     historyDay6Temp.text(historyWeatherResponse.forecast.forecastday[1].day.avgtemp_c+"℃");
     historyDay7Temp.text(historyWeatherResponse.forecast.forecastday[0].day.avgtemp_c+"℃");
+
+    historyDay1Img.attr("src",historyWeatherResponse.forecast.forecastday[6].day.condition.icon);
+    historyDay2Img.attr("src",historyWeatherResponse.forecast.forecastday[5].day.condition.icon);
+    historyDay3Img.attr("src",historyWeatherResponse.forecast.forecastday[4].day.condition.icon);
+    historyDay4Img.attr("src",historyWeatherResponse.forecast.forecastday[3].day.condition.icon);
+    historyDay5Img.attr("src",historyWeatherResponse.forecast.forecastday[2].day.condition.icon);
+    historyDay6Img.attr("src",historyWeatherResponse.forecast.forecastday[1].day.condition.icon);
+    historyDay7Img.attr("src",historyWeatherResponse.forecast.forecastday[0].day.condition.icon);
+
 
   } catch (error) {
     console.error("Error fetching weather data:", error);
@@ -311,3 +342,9 @@ toggle.addEventListener("click", ()=>{
     
 })
 toggle.addEventListener("click", ()=> toggle.classList.toggle("active"));
+
+
+
+ 
+
+

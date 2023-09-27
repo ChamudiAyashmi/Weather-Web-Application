@@ -275,7 +275,7 @@ label{
     font-size: 35px;
     
 }
-table{
+.forecast table{
     width: 100%;
     margin-left: 3%;
     /* margin-right: 3%; */
@@ -514,9 +514,23 @@ table td img{
     border-radius: 15px;
     border: none;
 }
-.light{
-    background-color: white;
+.history-date{
+    font-size: 22px;
+    margin-left: 5%;
+}
+.selectDate{
+    background: white;
     color: black;
+    font-size: 18px;
+    width: 152px;
+    height: 35px;
+    border-radius: 8px;
+    border: none;
+    
+}
+.selectDate:hover{
+    color: white;
+    background-color: black;
 }
 .font-change{
     color: black;
