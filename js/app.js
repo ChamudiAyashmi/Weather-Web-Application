@@ -398,6 +398,19 @@ let foreDay3Humidity = document.getElementById("day3-humidity");
 let foreDay4Humidity = document.getElementById("day4-humidity");
 let foreDay5Humidity = document.getElementById("day5-humidity");
 
+let foreDay1Visibility = document.getElementById("day1-visibility");
+let foreDay2Visibility = document.getElementById("day2-visibility");
+let foreDay3Visibility = document.getElementById("day3-visibility");
+let foreDay4Visibility = document.getElementById("day4-visibility");
+let foreDay5Visibility = document.getElementById("day5-visibility");
+
+let h4Temperature = document.getElementById("h4-temperature");
+let h4Humidity = document.getElementById("h4-humidity");
+let h4WindSpeed = document.getElementById("h4-windSpeed");
+let h4Uv = document.getElementById("h4-uv");
+let h4Visibility = document.getElementById("h4-visibility");
+let h4Pressure = document.getElementById("h4-pressure");
+
 
 let btnDark = document.getElementById("btnDark");
 
@@ -446,6 +459,19 @@ btnDark.addEventListener("click",()=>{
     foreDay4Humidity.style.color = "#000";
     foreDay5Humidity.style.color = "#000";
     
+    foreDay1Visibility.style.color = "#000";
+    foreDay2Visibility.style.color = "#000";
+    foreDay3Visibility.style.color = "#000";
+    foreDay4Visibility.style.color = "#000";
+    foreDay5Visibility.style.color = "#000";
+
+    h4Temperature.style.color = "#000";
+    h4Humidity.style.color = "#000";
+    h4WindSpeed.style.color = "#000";
+    h4Uv.style.color = "#000";
+    h4Visibility.style.color = "#000";
+    h4Pressure.style.color = "#000";
+    
     modeSelector++;
 
   }else{
@@ -491,6 +517,19 @@ btnDark.addEventListener("click",()=>{
     foreDay3Humidity.style.color = "#FFFFFF";
     foreDay4Humidity.style.color = "#FFFFFF";
     foreDay5Humidity.style.color = "#FFFFFF";
+
+    foreDay1Visibility.style.color = "#FFFFFF";
+    foreDay2Visibility.style.color = "#FFFFFF";
+    foreDay3Visibility.style.color = "#FFFFFF";
+    foreDay4Visibility.style.color = "#FFFFFF";
+    foreDay5Visibility.style.color = "#FFFFFF";
+
+    h4Temperature.style.color = "#FFFFFF";
+    h4Humidity.style.color = "#FFFFFF";
+    h4WindSpeed.style.color = "#FFFFFF";
+    h4Uv.style.color = "#FFFFFF";
+    h4Visibility.style.color = "#FFFFFF";
+    h4Pressure.style.color = "#FFFFFF";
 
     modeSelector++;
 
