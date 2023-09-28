@@ -25,7 +25,7 @@
           </nav>
     
         <section class="section1">
-            <div class="image">
+            <div class="image" id="themeChangeImg">
                 <div class="search">
                     <input id="searchbar-text" class="search-bar" type="text" placeholder="Search Location Here" >
                     <i onclick="searchIconOnclick()" id="secrch-icon" class='bx bx-search-alt-2'></i>
@@ -54,10 +54,10 @@
         <section class="section2">
             <div class="weather-details2">
                 <div class="today-highlights" id="divtoday-highlights">
-                    <h2 class="text" id="h2">Today's Highlights</h2>
+                    <h2 class="text" id="todays-highlights-text">Today's Highlights</h2>
                     <hr>
                     <div class="today-highlights-div1">
-                        <div class="temperature today-highlights-weather-details" id="today-highlights-weather-details">
+                        <div class="temperature today-highlights-weather-details" id="tdHighDiv1">
                             <h4 class="card-heading text" id="h4">Temperature</h4>
                             <div class="box">
                                 <div class="weather-icons">
@@ -69,7 +69,7 @@
 
                             </div>
                         </div>
-                        <div class="temperature" id="today-highlights-weather-details">
+                        <div class="temperature" id="tdHighDiv2">
                             <h4>Humidity</h4>
                             <div class="box">
                                 <div class="weather-icons">
@@ -82,7 +82,7 @@
                             </div>
                             
                         </div>
-                        <div class="temperature" id="today-highlights-weather-details1">
+                        <div class="temperature" id="tdHighDiv3">
                             <h4>Wind Speed</h4>
                             <div class="box">
                                 <div class="weather-icons">
@@ -97,7 +97,7 @@
 
                     </div>
                     <div class="today-highlights-div2">
-                        <div class="temperature">
+                        <div class="temperature" id="tdHighDiv4">
                             <h4>UV</h4>
                             <div class="box">
                                 <div class="weather-icons">
@@ -110,7 +110,7 @@
                             </div>
                             
                         </div>
-                        <div class="temperature">
+                        <div class="temperature" id="tdHighDiv5">
                             <h4>Visibility</h4>
                             <div class="box">
                                 <div class="weather-icons">
@@ -122,7 +122,7 @@
 
                             </div>
                         </div>
-                        <div class="temperature today-highlights-weather-details">
+                        <div class="temperature today-highlights-weather-details" id="tdHighDiv6">
                             <h4>Pressure</h4>
                             <div class="box">
                                 <div class="weather-icons">
@@ -137,8 +137,8 @@
                     </div>
     
                 </div>
-                <div class="forecast" id="div2">
-                    <h2>5-Day-Forecast</h2>
+                <div class="forecast" id="div-forecast">
+                    <h2 id="5-Day-Forecast-text">5-Day-Forecast</h2>
                     <hr>
                         <table>
                             <tr>
@@ -189,7 +189,7 @@
             <h2>Previous Weather Details</h2>
             <hr>
             <div class="previous-weather">
-                <div class="weather-data">
+                <div class="weather-data" id="divWeatherData1">
                     <div class="date">
                         <label id="history-day1" for="">08/20</label><br>
                     </div>
@@ -200,7 +200,7 @@
                         <label id="history-day1-temp" for="">30℃</label>
                     </div>
                 </div>
-                <div class="weather-data">
+                <div class="weather-data" id="divWeatherData2">
                     <div class="date">
                         <label id="history-day2" for="">08/19</label><br>
                     </div>
@@ -211,7 +211,7 @@
                         <label id="history-day2-temp" for="">29℃</label>
                     </div>
                 </div>
-                <div class="weather-data">
+                <div class="weather-data" id="divWeatherData3">
                     <div class="date">
                         <label id="history-day3" for="">08/18</label><br>
                     </div>
@@ -222,7 +222,7 @@
                         <label id="history-day3-temp" for="">28℃</label>
                     </div>
                 </div>
-                <div class="weather-data">
+                <div class="weather-data" id="divWeatherData4">
                     <div class="date">
                         <label id="history-day4" for="">08/17</label><br>
                     </div>
@@ -233,7 +233,7 @@
                         <label id="history-day4-temp" for="">27℃</label>
                     </div>
                 </div>
-                <div class="weather-data">
+                <div class="weather-data" id="divWeatherData5">
                     <div class="date">
                         <label id="history-day5" for="">08/16</label><br>
                     </div>
@@ -244,7 +244,7 @@
                         <label id="history-day5-temp" for="">26℃</label>
                     </div>
                 </div>
-                <div class="weather-data">
+                <div class="weather-data" id="divWeatherData6">
                     <div class="date">
                         <label id="history-day6" for="">08/15</label><br>
                     </div>
@@ -255,7 +255,7 @@
                         <label id="history-day6-temp" for="">28℃</label>
                     </div>
                 </div>
-                <div class="weather-data">
+                <div class="weather-data" id="divWeatherData7">
                     <div class="date">
                         <label id="history-day7" for="">08/14</label><br>
                     </div>
@@ -315,7 +315,7 @@
         </section>
         <section class="section5">
             <div class="section5-div">
-                <div class="starter">
+                <div class="starter" id="starterDiv">
                     <div class="hedding">
                         <h3>Starter</h3>
                         <label for="">$25 <span>/month</span></label>
@@ -350,7 +350,7 @@
                         <button>Get Started</button>
                     </div>
                 </div>
-            <div class="pro">
+            <div class="pro" id="proDiv">
                 <div class="hedding">
                     <h3>Pro</h3>
                     <label for="">$65 <span>/month</span></label>

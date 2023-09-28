@@ -354,76 +354,144 @@ async function setWeather(cityName) {
 
 //-------------------Change mode----------------------------
 
-
-// let themeImg =document.getElementById("theme-mode-img");
 let modeSelector=0;
 
-
-// lightModeChanger();
-
-// function lightModeChanger(){
-//   themeImg.addEventListener("click",()=>{
-//     if(modeSelector%2==0){
-//       themeImg.src="/assets/icons/brightness.png"; 
-//       modeSelector++;
-//       themeChanger();
-//     }else{
-//       themeImg.src="/assets/icons/night-mode.png";
-//       modeSelector++;
-//       themeChanger();
-//     }
-    
-    
-//   })
-// }
-
-// let currentLocation = document.getElementById("current-location");
-// let divAirCondition = document.getElementById("div-aircondition");
-// let div3dayForecast = document.getElementById("div-3dayforecast");
-// let divPreviousWeather = document.getElementById("div-previous-weather");
-// let divPastdataHead = document.getElementById("day7-pastdata-heading");
-
-
-// function themeChanger(){
-//   if(modeSelector%2==0){
-//     document.body.style.backgroundColor = "#ffff";
-//     currentLocation.style.backgroundColor = "#34495e";
-//     divAirCondition.style.backgroundColor = "rgba(30, 20, 20, 0.4)";
-//     divPreviousWeather.style.color = "#000";
-//     div3dayForecast.style.backgroundColor = "rgba(30, 20, 20, 0.4)";
-//     divPreviousWeather.style.backgroundColor = "rgba(30, 20, 20, 0.4)";
-//     divPastdataHead.style.backgroundColor = "rgba(38, 10, 10, 0.499)";
-//     modeSelector++;
-//   }else{
-//     document.body.style.backgroundColor = "#2B2D42";
-//     currentLocation.style.backgroundColor = "rgba(2, 6, 37, 0.452)";
-//     divAirCondition.style.backgroundColor = "rgba(217, 217, 217, 0.18)";
-//     div3dayForecast.style.backgroundColor = "rgba(217, 217, 217, 0.18)";
-//     divPreviousWeather.style.backgroundColor = "rgba(17, 16, 16, 0.249)";
-//     divPastdataHead.style.backgroundColor = "rgba(217, 217, 217, 0.3)";
-//     modeSelector++;
-//   }
-// }
-
-
-
+let themeChangeImg = document.getElementById("themeChangeImg");
 let divtodayHighlights = document.getElementById("divtoday-highlights");
+let divForecast = document.getElementById("div-forecast");
+let tdHighDiv1 = document.getElementById("tdHighDiv1");
+let tdHighDiv2 = document.getElementById("tdHighDiv2");
+let tdHighDiv3 = document.getElementById("tdHighDiv3");
+let tdHighDiv4 = document.getElementById("tdHighDiv4");
+let tdHighDiv5 = document.getElementById("tdHighDiv5");
+let tdHighDiv6 = document.getElementById("tdHighDiv6");
+
+let divWeatherData1 = document.getElementById("divWeatherData1");
+let divWeatherData2 = document.getElementById("divWeatherData2");
+let divWeatherData3 = document.getElementById("divWeatherData3");
+let divWeatherData4 = document.getElementById("divWeatherData4");
+let divWeatherData5 = document.getElementById("divWeatherData5");
+let divWeatherData6 = document.getElementById("divWeatherData6");
+let divWeatherData7 = document.getElementById("divWeatherData7");
+
+let starterDiv = document.getElementById("starterDiv");
+let proDiv = document.getElementById("proDiv");
+
+let todaysHighlightsText = document.getElementById("todays-highlights-text");
+let dayForecastText = document.getElementById("5-Day-Forecast-text");
+
+let foreDay1 = document.getElementById("day1");
+let foreDay2 = document.getElementById("day2");
+let foreDay3 = document.getElementById("day3");
+let foreDay4 = document.getElementById("day4");
+let foreDay5 = document.getElementById("day5");
+
+let foreDay1Temp = document.getElementById("day1-temp");
+let foreDay2Temp = document.getElementById("day2-temp");
+let foreDay3Temp = document.getElementById("day3-temp");
+let foreDay4Temp = document.getElementById("day4-temp");
+let foreDay5Temp = document.getElementById("day5-temp");
+
+let foreDay1Humidity = document.getElementById("day1-humidity");
+let foreDay2Humidity = document.getElementById("day2-humidity");
+let foreDay3Humidity = document.getElementById("day3-humidity");
+let foreDay4Humidity = document.getElementById("day4-humidity");
+let foreDay5Humidity = document.getElementById("day5-humidity");
+
 
 let btnDark = document.getElementById("btnDark");
 
 btnDark.addEventListener("click",()=>{
   if(modeSelector%2==0){
     document.body.style.backgroundColor = "#D9D9D9";
+    themeChangeImg.style.backgroundImage="url(/assets/morning.jpg)";
     divtodayHighlights.style.backgroundColor = "#FFFFFF";
-    div2.style.backgroundColor = "#FFFFFF";
+    divForecast.style.backgroundColor = "#FFFFFF";
 
+    tdHighDiv1.style.backgroundColor = "#D9D9D9";
+    tdHighDiv2.style.backgroundColor = "#D9D9D9";
+    tdHighDiv3.style.backgroundColor = "#D9D9D9";
+    tdHighDiv4.style.backgroundColor = "#D9D9D9";
+    tdHighDiv5.style.backgroundColor = "#D9D9D9";
+    tdHighDiv6.style.backgroundColor = "#D9D9D9";
+
+    divWeatherData1.style.backgroundColor = "#FFFFFF";
+    divWeatherData2.style.backgroundColor = "#FFFFFF";
+    divWeatherData3.style.backgroundColor = "#FFFFFF";
+    divWeatherData4.style.backgroundColor = "#FFFFFF";
+    divWeatherData5.style.backgroundColor = "#FFFFFF";
+    divWeatherData6.style.backgroundColor = "#FFFFFF";
+    divWeatherData7.style.backgroundColor = "#FFFFFF";
+    
+    starterDiv.style.backgroundColor = "#FFFFFF";
+    proDiv.style.backgroundColor = "#FFFFFF";
+
+    todaysHighlightsText.style.color = "#000";
+    dayForecastText.style.color = "#000";
+    foreDay1.style.color = "#000";
+    foreDay2.style.color = "#000";
+    foreDay3.style.color = "#000";
+    foreDay4.style.color = "#000";
+    foreDay5.style.color = "#000";
+
+    foreDay1Temp.style.color = "#000";
+    foreDay2Temp.style.color = "#000";
+    foreDay3Temp.style.color = "#000";
+    foreDay4Temp.style.color = "#000";
+    foreDay5Temp.style.color = "#000";
+
+    foreDay1Humidity.style.color = "#000";
+    foreDay2Humidity.style.color = "#000";
+    foreDay3Humidity.style.color = "#000";
+    foreDay4Humidity.style.color = "#000";
+    foreDay5Humidity.style.color = "#000";
+    
     modeSelector++;
+
   }else{
     document.body.style.backgroundColor = "#2B2D42";
-    divtodayHighlights.style.backgroundColor = "rgba(255, 255, 255, 0.1)"
-    div2.style.backgroundColor = "rgba(255, 255, 255, 0.1)"
-    // document.getElementById("h2").classList.add('text');
-    // document.getElementById("h4").classList.add('text');
+    themeChangeImg.style.backgroundImage="url(/assets/Night.jpg)";
+    divtodayHighlights.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
+    divForecast.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
+    tdHighDiv1.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
+    tdHighDiv2.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
+    tdHighDiv3.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
+    tdHighDiv4.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
+    tdHighDiv5.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
+    tdHighDiv6.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
+
+    divWeatherData1.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
+    divWeatherData2.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
+    divWeatherData3.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
+    divWeatherData4.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
+    divWeatherData5.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
+    divWeatherData6.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
+    divWeatherData7.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
+
+    starterDiv.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
+    proDiv.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
+
+    todaysHighlightsText.style.color = "#FFFFFF";
+    dayForecastText.style.color = "#FFFFFF";
+
+    foreDay1.style.color = "#FFFFFF";
+    foreDay2.style.color = "#FFFFFF";
+    foreDay3.style.color = "#FFFFFF";
+    foreDay4.style.color = "#FFFFFF";
+    foreDay5.style.color = "#FFFFFF";
+
+    foreDay1Temp.style.color = "#FFFFFF";
+    foreDay2Temp.style.color = "#FFFFFF";
+    foreDay3Temp.style.color = "#FFFFFF";
+    foreDay4Temp.style.color = "#FFFFFF";
+    foreDay5Temp.style.color = "#FFFFFF";
+
+    foreDay1Humidity.style.color = "#FFFFFF";
+    foreDay2Humidity.style.color = "#FFFFFF";
+    foreDay3Humidity.style.color = "#FFFFFF";
+    foreDay4Humidity.style.color = "#FFFFFF";
+    foreDay5Humidity.style.color = "#FFFFFF";
+
     modeSelector++;
 
   }
