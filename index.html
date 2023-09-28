@@ -17,7 +17,9 @@
             <div class="my-nav">
                 <button class="my-btn-login">Login</button>
                 <button class="my-btn-signUp">Sign Up</button>
-                <div class="toggle"></div>
+                <img id="btnDark" src="assets/brightness (3).png" alt="">
+                <!-- <button class="dark-light" id="btnDark">dark</button> -->
+                
             </div>
             </div>
           </nav>
@@ -51,12 +53,12 @@
         </section>
         <section class="section2">
             <div class="weather-details2">
-                <div class="today-highlights">
-                    <h2>Today's Highlights</h2>
+                <div class="today-highlights" id="divtoday-highlights">
+                    <h2 class="text" id="h2">Today's Highlights</h2>
                     <hr>
                     <div class="today-highlights-div1">
-                        <div class="temperature">
-                            <h4 class="card-heading">Temperature</h4>
+                        <div class="temperature today-highlights-weather-details" id="today-highlights-weather-details">
+                            <h4 class="card-heading text" id="h4">Temperature</h4>
                             <div class="box">
                                 <div class="weather-icons">
                                     <img src="assets/thermometer.png" alt="">
@@ -67,7 +69,7 @@
 
                             </div>
                         </div>
-                        <div class="temperature">
+                        <div class="temperature" id="today-highlights-weather-details">
                             <h4>Humidity</h4>
                             <div class="box">
                                 <div class="weather-icons">
@@ -80,7 +82,7 @@
                             </div>
                             
                         </div>
-                        <div class="temperature">
+                        <div class="temperature" id="today-highlights-weather-details1">
                             <h4>Wind Speed</h4>
                             <div class="box">
                                 <div class="weather-icons">
@@ -120,7 +122,7 @@
 
                             </div>
                         </div>
-                        <div class="temperature">
+                        <div class="temperature today-highlights-weather-details">
                             <h4>Pressure</h4>
                             <div class="box">
                                 <div class="weather-icons">
@@ -135,7 +137,7 @@
                     </div>
     
                 </div>
-                <div class="forecast">
+                <div class="forecast" id="div2">
                     <h2>5-Day-Forecast</h2>
                     <hr>
                         <table>
@@ -190,8 +192,6 @@
                 <div class="weather-data">
                     <div class="date">
                         <label id="history-day1" for="">08/20</label><br>
-                        <!-- <label  for="">Tue</label> -->
-
                     </div>
                     <div class="weather-img">
                         <img id="pre-day1-img" src="assets/sun.png" alt="">
@@ -203,8 +203,6 @@
                 <div class="weather-data">
                     <div class="date">
                         <label id="history-day2" for="">08/19</label><br>
-                        <!-- <label for="">Mon</label> -->
-
                     </div>
                     <div class="weather-img">
                         <img id="pre-day2-img" src="assets/cloudy.png" alt="">
@@ -216,8 +214,6 @@
                 <div class="weather-data">
                     <div class="date">
                         <label id="history-day3" for="">08/18</label><br>
-                        <!-- <label for="">Sun</label> -->
-
                     </div>
                     <div class="weather-img">
                         <img id="pre-day3-img" src="assets/cloudy (2).png" alt="">
@@ -229,8 +225,6 @@
                 <div class="weather-data">
                     <div class="date">
                         <label id="history-day4" for="">08/17</label><br>
-                        <!-- <label for="">Sat</label> -->
-
                     </div>
                     <div class="weather-img">
                         <img id="pre-day4-img" src="assets/heavy-rain.png" alt="">
@@ -242,8 +236,6 @@
                 <div class="weather-data">
                     <div class="date">
                         <label id="history-day5" for="">08/16</label><br>
-                        <!-- <label for="">Fri</label> -->
-
                     </div>
                     <div class="weather-img">
                         <img id="pre-day5-img" src="assets/storm.png" alt="">
@@ -255,8 +247,6 @@
                 <div class="weather-data">
                     <div class="date">
                         <label id="history-day6" for="">08/15</label><br>
-                        <!-- <label for="">Thu</label> -->
-
                     </div>
                     <div class="weather-img">
                         <img id="pre-day6-img" src="assets/sun.png" alt="">
@@ -268,8 +258,6 @@
                 <div class="weather-data">
                     <div class="date">
                         <label id="history-day7" for="">08/14</label><br>
-                        <!-- <label for="">Wed</label> -->
-
                     </div>
                     <div class="weather-img">
                         <img id="pre-day7-img" src="assets/raining.png" alt="">
@@ -289,13 +277,13 @@
                     <h3>History</h3>
                     <hr>
                     <div class="form-group">
-                        <input type="date" name="" id="">
-                        <button class="selectDate">Select Date</button>
+                        <input type="date" name="" id="date-input">
+                        <button class="selectDate" id="btnSelectDate" onclick="BtnSelectDateOnClick()">Select Date</button>
                     </div>
 
-                    <label class="history-date" for="">2023-09-26</label>
+                    <label class="history-date" id="historyDateLabel" for="">2023-09-26</label>
                     <hr>
-                    <table border="1">
+                    <table class="table1" border="1">
                         <tr>
                             <td>Cloudy</td>
                             <td>Img</td>
@@ -303,7 +291,7 @@
                         </tr>
                     </table>
 
-                    <table border="1">
+                    <table class="table2" border="1">
                         <tr>
                             <td>Temperature</td>
                             <td>22.5℃</td>

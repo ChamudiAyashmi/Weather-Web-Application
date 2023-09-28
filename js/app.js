@@ -134,6 +134,35 @@ function searchIconOnclick(){
   })
 }
 
+let inputDate = document.getElementById("date-input");
+let historyDateLabel = document.getElementById("historyDateLabel");
+
+
+
+ async function BtnSelectDateOnClick(cityForHistory){
+
+  console.log("c :" +cityForHistory);
+  var c = cityForHistory;
+
+  var inputDateValue = inputDate.value;
+  console.log(inputDateValue);
+  historyDateLabel.textContent=inputDateValue; 
+
+  try {
+    const historyRes = await $.ajax({
+      method: "GET",
+      url: `https://api.weatherapi.com/v1/history.json?dt=${inputDateValue}&key=89cc63fe3a254352b8d132020231609&q=${c}`,
+    });
+    console.log(historyRes);
+    // console.log("cityname :"+cityName);
+
+  } catch (error) {
+    console.error("Error fetching weather data:", error);
+
+  }
+
+}
+
 
 const searchUrl = "http://api.weatherapi.com/v1/search.json?key=89cc63fe3a254352b8d132020231609&q="
 
@@ -142,6 +171,7 @@ const currentUrl = "http://api.weatherapi.com/v1/current.json?key=89cc63fe3a2543
 const forecastUrl = "https://api.weatherapi.com/v1/forecast.json?key=89cc63fe3a254352b8d132020231609&days=6&q="
 
 const historyUrl = `https://api.weatherapi.com/v1/history.json?&dt=${formattedDate}&end_dt=${formattedDateToday}&key=89cc63fe3a254352b8d132020231609&q=`
+
 
 let city;
 
@@ -186,6 +216,7 @@ async function getLocation(latitude,longitude){
   city = cityData[0].name;
   console.log("Current Location : "+city);
   setWeather(city);
+  BtnSelectDateOnClick(city);
 }
 
 async function setWeather(cityName) {
@@ -195,7 +226,7 @@ async function setWeather(cityName) {
       url: currentUrl + cityName,
     });
     console.log(weatherResponse);
-    console.log(cityName);
+    console.log("cityname :"+cityName);
 
     currentLocationTemperature.text(weatherResponse.current.temp_c+ "℃");
     currentLocWeatherImg.attr("src",weatherResponse.current.condition.icon);
@@ -323,25 +354,132 @@ async function setWeather(cityName) {
 
 //-------------------Change mode----------------------------
 
-let mood = 0;
-const body = document.querySelector("body")
-toggle = document.querySelector(".toggle")
 
-toggle.addEventListener("click", ()=>{
-    body.classList.toggle("light");
-    if(mood%2==0){
-      document.querySelector(".temperature").classList.add('light');
-      document.querySelector(".card-heading").classList.add('font-change');
-      mood++;
-    }else{
-      document.querySelector(".temperature").classList.remove('light');
-      document.querySelector(".card-heading").classList.remove('font-change');
-      mood++;
-      console.log(mood);
-    }
+// let themeImg =document.getElementById("theme-mode-img");
+let modeSelector=0;
+
+
+// lightModeChanger();
+
+// function lightModeChanger(){
+//   themeImg.addEventListener("click",()=>{
+//     if(modeSelector%2==0){
+//       themeImg.src="/assets/icons/brightness.png"; 
+//       modeSelector++;
+//       themeChanger();
+//     }else{
+//       themeImg.src="/assets/icons/night-mode.png";
+//       modeSelector++;
+//       themeChanger();
+//     }
     
+    
+//   })
+// }
+
+// let currentLocation = document.getElementById("current-location");
+// let divAirCondition = document.getElementById("div-aircondition");
+// let div3dayForecast = document.getElementById("div-3dayforecast");
+// let divPreviousWeather = document.getElementById("div-previous-weather");
+// let divPastdataHead = document.getElementById("day7-pastdata-heading");
+
+
+// function themeChanger(){
+//   if(modeSelector%2==0){
+//     document.body.style.backgroundColor = "#ffff";
+//     currentLocation.style.backgroundColor = "#34495e";
+//     divAirCondition.style.backgroundColor = "rgba(30, 20, 20, 0.4)";
+//     divPreviousWeather.style.color = "#000";
+//     div3dayForecast.style.backgroundColor = "rgba(30, 20, 20, 0.4)";
+//     divPreviousWeather.style.backgroundColor = "rgba(30, 20, 20, 0.4)";
+//     divPastdataHead.style.backgroundColor = "rgba(38, 10, 10, 0.499)";
+//     modeSelector++;
+//   }else{
+//     document.body.style.backgroundColor = "#2B2D42";
+//     currentLocation.style.backgroundColor = "rgba(2, 6, 37, 0.452)";
+//     divAirCondition.style.backgroundColor = "rgba(217, 217, 217, 0.18)";
+//     div3dayForecast.style.backgroundColor = "rgba(217, 217, 217, 0.18)";
+//     divPreviousWeather.style.backgroundColor = "rgba(17, 16, 16, 0.249)";
+//     divPastdataHead.style.backgroundColor = "rgba(217, 217, 217, 0.3)";
+//     modeSelector++;
+//   }
+// }
+
+
+
+let divtodayHighlights = document.getElementById("divtoday-highlights");
+
+let btnDark = document.getElementById("btnDark");
+
+btnDark.addEventListener("click",()=>{
+  if(modeSelector%2==0){
+    document.body.style.backgroundColor = "#D9D9D9";
+    divtodayHighlights.style.backgroundColor = "#FFFFFF";
+    div2.style.backgroundColor = "#FFFFFF";
+
+    modeSelector++;
+  }else{
+    document.body.style.backgroundColor = "#2B2D42";
+    divtodayHighlights.style.backgroundColor = "rgba(255, 255, 255, 0.1)"
+    div2.style.backgroundColor = "rgba(255, 255, 255, 0.1)"
+    // document.getElementById("h2").classList.add('text');
+    // document.getElementById("h4").classList.add('text');
+    modeSelector++;
+
+  }
 })
-toggle.addEventListener("click", ()=> toggle.classList.toggle("active"));
+
+
+
+// let btnSelectDate = document.getElementById("btnSelectDate");
+// let inputDate = document.getElementById("date-input");
+// let historyDateLabel = document.getElementById("historyDateLabel");
+
+// btnSelectDate.addEventListener("click",()=>{
+//   var inputDateValue = inputDate.value;
+//   console.log(inputDateValue);
+//   historyDateLabel.textContent=inputDateValue; 
+//   console.log("citi"+cityName.textContent);
+
+//   var historyUrl1 = `https://api.weatherapi.com/v1/history.json?dt=${inputDateValue}&key=89cc63fe3a254352b8d132020231609&q=`;
+
+// })
+
+// console.log(historyUrl1);
+
+
+
+// console.log("calender Date : "+inputDateValue);
+
+
+// btnSelectDate.addEventListener("click", async () => {
+//   const inputDateValue = inputDate.value;
+//   console.log(inputDateValue);
+//   historyDateLabel.textContent = inputDateValue;
+
+//   try {
+//     // Construct the historical weather API URL using the selected date and city name
+//     console.log("City Name:", cityName.textContent);
+//     const historyUrl1 = `https://api.weatherapi.com/v1/history.json?q=${cityName.textContent}&dt=${inputDateValue}&key=89cc63fe3a254352b8d132020231609`;
+
+//     // Make an AJAX request to fetch historical weather data
+//     const historyWeatherRespo = await $.ajax({
+//       method: "GET",
+//       url: historyUrl1,
+//     });
+
+//     console.log("Historical Weather Data:");
+//     console.log(historyWeatherRespo);
+
+//     // Update the UI with historical weather data as needed
+//     // ...
+//   } catch (error) {
+//     console.error("Error fetching historical weather data:", error);
+//   }
+// });
+
+
+
 
 
 

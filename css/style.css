@@ -62,31 +62,20 @@ body.light{
     border: none;
     cursor: pointer;
 }
-.toggle{
-    height: 35px;
-    width: 90px;
-    border-radius: 100px;
-    background-color: #580AFF;
-    margin-left: 4%;
-    margin-top: 3%;
-    cursor: pointer;
-}
-.toggle::before{
-    content:"";
-    position: absolute;
-    height: 30px;
-    width: 30px;
-    background-color: white;
-    border-radius: 50%;
-    margin-top: 2px;
-    margin-left: 3px;
-    transition: all 0.3s ease-in-out;
-    
-   /* transform: translate(-50%); */
 
+.dark-light{
+    height: 35px;
+    width: 150px;
+    color: black;
+    background-color: white;
+    font-size: 20px;
+    border-radius: 10px;
 }
-.toggle.active::before{
-    left : calc(92.5%);
+.my-nav img{
+    width: 35px;
+    height: 35px;
+    margin-top: 3%;
+    margin-left: 5%;
 }
 .section1{
     height: 595px;
@@ -517,6 +506,27 @@ table td img{
 .history-date{
     font-size: 22px;
     margin-left: 5%;
+    
+}
+.table1{
+    margin-top: 3%;
+    margin-left: 5%;
+    /* margin-right: 5%; */
+    /* margin: 5%; */
+    width: 80%;
+    
+}
+.table2{
+    margin-left: 5%;
+    /* margin-right: 5%; */
+    /* margin: 5%; */
+    width: 80%;
+    
+}
+.table1 tr{
+    width: 100%;
+    margin: 3%;
+    padding: 3%;
 }
 .selectDate{
     background: white;
@@ -535,7 +545,15 @@ table td img{
 .font-change{
     color: black;
 }
-
+/* 
 .dark{
     background-color: gray;
+} */
+
+/* .Dark{
+    color: white;
 }
+
+.Light{
+    color: black;
+} */
