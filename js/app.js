@@ -411,6 +411,51 @@ let h4Uv = document.getElementById("h4-uv");
 let h4Visibility = document.getElementById("h4-visibility");
 let h4Pressure = document.getElementById("h4-pressure");
 
+let tHllblTemperature = document.getElementById("lblTemperature");
+let tHllblHumidity = document.getElementById("lblHumidity");
+let tHllblWindSpeed = document.getElementById("lblWindSpeed");
+let tHllblUv = document.getElementById("lblUv");
+let tHllblVisibility = document.getElementById("lblVisibility");
+let tHllblPressure = document.getElementById("lblPressure");
+
+let starterText = document.getElementById("starter-text");
+let starterPrice = document.getElementById("starterPrice");
+let stpoint1 = document.getElementById("st-point1");
+let stpoint2 = document.getElementById("st-point2");
+let stpoint3 = document.getElementById("st-point3");
+let stpoint4 = document.getElementById("st-point4");
+let stpoint5 = document.getElementById("st-point5");
+
+let proText = document.getElementById("pro-text");
+let proPrice = document.getElementById("proPrice");
+let prPoint1 = document.getElementById("pr-point1");
+let prPoint2 = document.getElementById("pr-point2");
+let prPoint3 = document.getElementById("pr-point3");
+let prPoint4 = document.getElementById("pr-point4");
+let prPoint5 = document.getElementById("pr-point5");
+
+let preWeatherDetailsText = document.getElementById("pre-weather-details-text");
+let historyText = document.getElementById("history-text");
+let historyDate1Text = document.getElementById("history-day1");
+let historyDate2Text = document.getElementById("history-day2");
+let historyDate3Text = document.getElementById("history-day3");
+let historyDate4Text = document.getElementById("history-day4");
+let historyDate5Text = document.getElementById("history-day5");
+let historyDate6Text = document.getElementById("history-day6");
+let historyDate7Text = document.getElementById("history-day7");
+
+let historyDay1TempText = document.getElementById("history-day1-temp");
+let historyDay2TempText = document.getElementById("history-day2-temp");
+let historyDay3TempText = document.getElementById("history-day3-temp");
+let historyDay4TempText = document.getElementById("history-day4-temp");
+let historyDay5TempText = document.getElementById("history-day5-temp");
+let historyDay6TempText = document.getElementById("history-day6-temp");
+let historyDay7TempText = document.getElementById("history-day7-temp");
+
+
+
+
+
 
 let btnDark = document.getElementById("btnDark");
 
@@ -471,6 +516,49 @@ btnDark.addEventListener("click",()=>{
     h4Uv.style.color = "#000";
     h4Visibility.style.color = "#000";
     h4Pressure.style.color = "#000";
+
+    tHllblTemperature.style.color = "#000";
+    tHllblHumidity.style.color = "#000";
+    tHllblWindSpeed.style.color = "#000";
+    tHllblUv.style.color = "#000";
+    tHllblVisibility.style.color = "#000";
+    tHllblPressure.style.color = "#000";
+
+    starterText.style.color = "#000";
+    starterPrice.style.color = "#000";
+    stpoint1.style.color = "#000";
+    stpoint2.style.color = "#000";
+    stpoint3.style.color = "#000";
+    stpoint4.style.color = "#000";
+    stpoint5.style.color = "#000";
+
+    proText.style.color = "#000";
+    proPrice.style.color = "#000";
+    prPoint1.style.color = "#000";
+    prPoint2.style.color = "#000";
+    prPoint3.style.color = "#000";
+    prPoint4.style.color = "#000";
+    prPoint5.style.color = "#000";
+
+    preWeatherDetailsText.style.color = "#000";
+    historyText.style.color = "#000";
+
+    historyDate1Text.style.color = "#000";
+    historyDate2Text.style.color = "#000";
+    historyDate3Text.style.color = "#000";
+    historyDate4Text.style.color = "#000";
+    historyDate5Text.style.color = "#000";
+    historyDate6Text.style.color = "#000";
+    historyDate7Text.style.color = "#000";
+
+    historyDay1TempText.style.color = "#000";
+    historyDay2TempText.style.color = "#000";
+    historyDay3TempText.style.color = "#000";
+    historyDay4TempText.style.color = "#000";
+    historyDay5TempText.style.color = "#000";
+    historyDay6TempText.style.color = "#000";
+    historyDay7TempText.style.color = "#000";
+
     
     modeSelector++;
 
@@ -531,6 +619,48 @@ btnDark.addEventListener("click",()=>{
     h4Visibility.style.color = "#FFFFFF";
     h4Pressure.style.color = "#FFFFFF";
 
+    tHllblTemperature.style.color = "#FFFFFF";
+    tHllblHumidity.style.color = "#FFFFFF";
+    tHllblWindSpeed.style.color = "#FFFFFF";
+    tHllblUv.style.color = "#FFFFFF";
+    tHllblVisibility.style.color = "#FFFFFF";
+    tHllblPressure.style.color = "#FFFFFF";
+    
+    starterText.style.color = "#FFFFFF";
+    starterPrice.style.color = "#FFFFFF";
+    stpoint1.style.color = "#FFFFFF";
+    stpoint2.style.color = "#FFFFFF";
+    stpoint3.style.color = "#FFFFFF";
+    stpoint4.style.color = "#FFFFFF";
+    stpoint5.style.color = "#FFFFFF";
+
+    proText.style.color = "#FFFFFF";
+    proPrice.style.color = "#FFFFFF";
+    prPoint1.style.color = "#FFFFFF";
+    prPoint2.style.color = "#FFFFFF";
+    prPoint3.style.color = "#FFFFFF";
+    prPoint4.style.color = "#FFFFFF";
+    prPoint5.style.color = "#FFFFFF";
+
+    preWeatherDetailsText.style.color = "#FFFFFF";
+    historyText.style.color = "#FFFFFF";
+
+    historyDate1Text.style.color = "#FFFFFF";
+    historyDate2Text.style.color = "#FFFFFF";
+    historyDate3Text.style.color = "#FFFFFF";
+    historyDate4Text.style.color = "#FFFFFF";
+    historyDate5Text.style.color = "#FFFFFF";
+    historyDate6Text.style.color = "#FFFFFF";
+    historyDate7Text.style.color = "#FFFFFF";
+
+    historyDay1TempText.style.color = "#FFFFFF";
+    historyDay2TempText.style.color = "#FFFFFF";
+    historyDay3TempText.style.color = "#FFFFFF";
+    historyDay4TempText.style.color = "#FFFFFF";
+    historyDay5TempText.style.color = "#FFFFFF";
+    historyDay6TempText.style.color = "#FFFFFF";
+    historyDay7TempText.style.color = "#FFFFFF";
+
     modeSelector++;
 
   }
@@ -538,52 +668,8 @@ btnDark.addEventListener("click",()=>{
 
 
 
-// let btnSelectDate = document.getElementById("btnSelectDate");
-// let inputDate = document.getElementById("date-input");
-// let historyDateLabel = document.getElementById("historyDateLabel");
-
-// btnSelectDate.addEventListener("click",()=>{
-//   var inputDateValue = inputDate.value;
-//   console.log(inputDateValue);
-//   historyDateLabel.textContent=inputDateValue; 
-//   console.log("citi"+cityName.textContent);
-
-//   var historyUrl1 = `https://api.weatherapi.com/v1/history.json?dt=${inputDateValue}&key=89cc63fe3a254352b8d132020231609&q=`;
-
-// })
-
-// console.log(historyUrl1);
 
 
-
-// console.log("calender Date : "+inputDateValue);
-
-
-// btnSelectDate.addEventListener("click", async () => {
-//   const inputDateValue = inputDate.value;
-//   console.log(inputDateValue);
-//   historyDateLabel.textContent = inputDateValue;
-
-//   try {
-//     // Construct the historical weather API URL using the selected date and city name
-//     console.log("City Name:", cityName.textContent);
-//     const historyUrl1 = `https://api.weatherapi.com/v1/history.json?q=${cityName.textContent}&dt=${inputDateValue}&key=89cc63fe3a254352b8d132020231609`;
-
-//     // Make an AJAX request to fetch historical weather data
-//     const historyWeatherRespo = await $.ajax({
-//       method: "GET",
-//       url: historyUrl1,
-//     });
-
-//     console.log("Historical Weather Data:");
-//     console.log(historyWeatherRespo);
-
-//     // Update the UI with historical weather data as needed
-//     // ...
-//   } catch (error) {
-//     console.error("Error fetching historical weather data:", error);
-//   }
-// });
 
 
 

@@ -384,6 +384,7 @@ table td img{
 }
 .map iframe{
     border-radius: 15px;
+    width: 100%;
 }
 .calender{
     width: 80%;
