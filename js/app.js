@@ -248,35 +248,23 @@ async function setWeather(cityName) {
       url: forecastUrl + cityName,
     });
     console.log(weatherForecastResponse);
-    let date1 = weatherForecastResponse['forecast']['forecastday'][1]['date'];
-    let date1Img = weatherForecastResponse['forecast']['forecastday'][1]['day']['condition']['icon'];
-    let date1Temp = weatherForecastResponse['forecast']['forecastday'][1]['day']['avgtemp_c'];
-    let date1Humidity = weatherForecastResponse['forecast']['forecastday'][1]['day']['avghumidity'];
-    let date1Visibility = weatherForecastResponse['forecast']['forecastday'][1]['day']['avgvis_km'];
+    let date1 = weatherForecastResponse['forecast']['forecastday'][0]['date'];
+    let date1Img = weatherForecastResponse['forecast']['forecastday'][0]['day']['condition']['icon'];
+    let date1Temp = weatherForecastResponse['forecast']['forecastday'][0]['day']['avgtemp_c'];
+    let date1Humidity = weatherForecastResponse['forecast']['forecastday'][0]['day']['avghumidity'];
+    let date1Visibility = weatherForecastResponse['forecast']['forecastday'][0]['day']['avgvis_km'];
 
-    let date2 = weatherForecastResponse['forecast']['forecastday'][2]['date'];
-    let date2Img = weatherForecastResponse['forecast']['forecastday'][2]['day']['condition']['icon'];
-    let date2Temp = weatherForecastResponse['forecast']['forecastday'][2]['day']['avgtemp_c'];
-    let date2Humidity = weatherForecastResponse['forecast']['forecastday'][2]['day']['avghumidity'];
-    let date2Visibility = weatherForecastResponse['forecast']['forecastday'][2]['day']['avgvis_km'];
+    let date2 = weatherForecastResponse['forecast']['forecastday'][1]['date'];
+    let date2Img = weatherForecastResponse['forecast']['forecastday'][1]['day']['condition']['icon'];
+    let date2Temp = weatherForecastResponse['forecast']['forecastday'][1]['day']['avgtemp_c'];
+    let date2Humidity = weatherForecastResponse['forecast']['forecastday'][1]['day']['avghumidity'];
+    let date2Visibility = weatherForecastResponse['forecast']['forecastday'][1]['day']['avgvis_km'];
 
-    let date3 = weatherForecastResponse['forecast']['forecastday'][3]['date'];
-    let date3Img = weatherForecastResponse['forecast']['forecastday'][3]['day']['condition']['icon'];
-    let date3Temp = weatherForecastResponse['forecast']['forecastday'][3]['day']['avgtemp_c'];
-    let date3Humidity = weatherForecastResponse['forecast']['forecastday'][3]['day']['avghumidity'];
-    let date3Visibility = weatherForecastResponse['forecast']['forecastday'][3]['day']['avgvis_km'];
-
-    let date4 = weatherForecastResponse['forecast']['forecastday'][4]['date'];
-    let date4Img = weatherForecastResponse['forecast']['forecastday'][4]['day']['condition']['icon'];
-    let date4Temp = weatherForecastResponse['forecast']['forecastday'][4]['day']['avgtemp_c'];
-    let date4Humidity = weatherForecastResponse['forecast']['forecastday'][4]['day']['avghumidity'];
-    let date4Visibility = weatherForecastResponse['forecast']['forecastday'][4]['day']['avgvis_km'];
-
-    let date5 = weatherForecastResponse['forecast']['forecastday'][5]['date'];
-    let date5Img = weatherForecastResponse['forecast']['forecastday'][5]['day']['condition']['icon'];
-    let date5Temp = weatherForecastResponse['forecast']['forecastday'][5]['day']['avgtemp_c'];
-    let date5Humidity = weatherForecastResponse['forecast']['forecastday'][5]['day']['avghumidity'];
-    let date5Visibility = weatherForecastResponse['forecast']['forecastday'][5]['day']['avgvis_km'];
+    let date3 = weatherForecastResponse['forecast']['forecastday'][2]['date'];
+    let date3Img = weatherForecastResponse['forecast']['forecastday'][2]['day']['condition']['icon'];
+    let date3Temp = weatherForecastResponse['forecast']['forecastday'][2]['day']['avgtemp_c'];
+    let date3Humidity = weatherForecastResponse['forecast']['forecastday'][2]['day']['avghumidity'];
+    let date3Visibility = weatherForecastResponse['forecast']['forecastday'][2]['day']['avgvis_km'];
     
     forecastDay1.text(date1);
     forecastDay1Img.attr("src",date1Img);
@@ -295,18 +283,6 @@ async function setWeather(cityName) {
     forecastDay3Temp.text(date3Temp+"℃");
     forecastDay3Humidity.text(date3Humidity+"%");
     forecastDay3Visibility.text(date3Visibility+"km");
-
-    forecastDay4.text(date4);
-    forecastDay4Img.attr("src",date4Img);
-    forecastDay4Temp.text(date4Temp+"℃");
-    forecastDay4Humidity.text(date4Humidity+"%");
-    forecastDay4Visibility.text(date4Visibility+"km");
-
-    forecastDay5.text(date5);
-    forecastDay5Img.attr("src",date5Img);
-    forecastDay5Temp.text(date5Temp+"℃");
-    forecastDay5Humidity.text(date5Humidity+"%");
-    forecastDay5Visibility.text(date5Visibility+"km");
   
   } catch (error) {
     console.error("Error fetching weather data:", error);
@@ -383,26 +359,18 @@ let dayForecastText = document.getElementById("5-Day-Forecast-text");
 let foreDay1 = document.getElementById("day1");
 let foreDay2 = document.getElementById("day2");
 let foreDay3 = document.getElementById("day3");
-let foreDay4 = document.getElementById("day4");
-let foreDay5 = document.getElementById("day5");
 
 let foreDay1Temp = document.getElementById("day1-temp");
 let foreDay2Temp = document.getElementById("day2-temp");
 let foreDay3Temp = document.getElementById("day3-temp");
-let foreDay4Temp = document.getElementById("day4-temp");
-let foreDay5Temp = document.getElementById("day5-temp");
 
 let foreDay1Humidity = document.getElementById("day1-humidity");
 let foreDay2Humidity = document.getElementById("day2-humidity");
 let foreDay3Humidity = document.getElementById("day3-humidity");
-let foreDay4Humidity = document.getElementById("day4-humidity");
-let foreDay5Humidity = document.getElementById("day5-humidity");
 
 let foreDay1Visibility = document.getElementById("day1-visibility");
 let foreDay2Visibility = document.getElementById("day2-visibility");
 let foreDay3Visibility = document.getElementById("day3-visibility");
-let foreDay4Visibility = document.getElementById("day4-visibility");
-let foreDay5Visibility = document.getElementById("day5-visibility");
 
 let h4Temperature = document.getElementById("h4-temperature");
 let h4Humidity = document.getElementById("h4-humidity");
@@ -452,6 +420,30 @@ let historyDay5TempText = document.getElementById("history-day5-temp");
 let historyDay6TempText = document.getElementById("history-day6-temp");
 let historyDay7TempText = document.getElementById("history-day7-temp");
 
+let btnLogin = document.getElementById("btn-login");
+
+let currentLocTemp = document.getElementById("current-loc-temperarure");
+let citiName = document.getElementById("cityName");
+let timeLbl = document.getElementById("time");
+let dayLbl = document.getElementById("day");
+let textHistory = document.getElementById("history-text");
+let historyDateLbl = document.getElementById("historyDateLabel");
+
+let divCalender = document.getElementById("div-calender");
+let calenderDateInput = document.getElementById("date-input");
+let btnSelectDate = document.getElementById("btnSelectDate");
+
+let imgThermometer = document.getElementById("img-thermometer");
+let imgHumidity = document.getElementById("img-humidity");
+let imgWindy = document.getElementById("img-windy");
+let imgUv = document.getElementById("img-ray");
+let imgWitness = document.getElementById("img-witness");
+let imgBarometer = document.getElementById("img-barometer");
+
+let iconLocation = document.getElementById("iconLocation");
+let searchIcon = document.getElementById("secrch-icon");
+let searchbarText = document.getElementById("searchbar-text");
+
 
 
 
@@ -465,6 +457,10 @@ btnDark.addEventListener("click",()=>{
     themeChangeImg.style.backgroundImage="url(/assets/morning.jpg)";
     divtodayHighlights.style.backgroundColor = "#FFFFFF";
     divForecast.style.backgroundColor = "#FFFFFF";
+    iconLocation.style.color = "#000";
+    searchIcon.style.color = "#000";
+    btnDark.style.backgroundImage = "url(/assets/brightnessBlack.png)";
+    btnDark.src = "/assets/brightnessBlack.png";
 
     tdHighDiv1.style.backgroundColor = "#D9D9D9";
     tdHighDiv2.style.backgroundColor = "#D9D9D9";
@@ -489,26 +485,18 @@ btnDark.addEventListener("click",()=>{
     foreDay1.style.color = "#000";
     foreDay2.style.color = "#000";
     foreDay3.style.color = "#000";
-    foreDay4.style.color = "#000";
-    foreDay5.style.color = "#000";
 
     foreDay1Temp.style.color = "#000";
     foreDay2Temp.style.color = "#000";
     foreDay3Temp.style.color = "#000";
-    foreDay4Temp.style.color = "#000";
-    foreDay5Temp.style.color = "#000";
 
     foreDay1Humidity.style.color = "#000";
     foreDay2Humidity.style.color = "#000";
     foreDay3Humidity.style.color = "#000";
-    foreDay4Humidity.style.color = "#000";
-    foreDay5Humidity.style.color = "#000";
     
     foreDay1Visibility.style.color = "#000";
     foreDay2Visibility.style.color = "#000";
     foreDay3Visibility.style.color = "#000";
-    foreDay4Visibility.style.color = "#000";
-    foreDay5Visibility.style.color = "#000";
 
     h4Temperature.style.color = "#000";
     h4Humidity.style.color = "#000";
@@ -558,7 +546,24 @@ btnDark.addEventListener("click",()=>{
     historyDay5TempText.style.color = "#000";
     historyDay6TempText.style.color = "#000";
     historyDay7TempText.style.color = "#000";
-
+    
+    btnLogin.style.color = "#000";
+    currentLocTemp.style.color = "#000";
+    searchbarText.style.color = "#000";
+    citiName.style.color = "#000";
+    timeLbl.style.color = "#000";
+    dayLbl.style.color = "#000";
+    textHistory.style.color = "#000";
+    historyDateLbl.style.color = "#000";
+    divCalender.style.backgroundColor = "#FFFFFF";
+    calenderDateInput.style.backgroundColor = "#D9D9D9";
+    btnSelectDate.style.backgroundColor = "#D9D9D9";
+    imgThermometer.src = "/assets/thermometerBlack.png";
+    imgHumidity.src = "/assets/humidityBlack.png";
+    imgWindy.src = "/assets/windyBlack.png";
+    imgUv.src = "/assets/raysBlack.png";
+    imgWitness.src = "/assets/witnessBlack.png";
+    imgBarometer.src = "/assets/barometerBlack.png";
     
     modeSelector++;
 
@@ -566,6 +571,10 @@ btnDark.addEventListener("click",()=>{
     document.body.style.backgroundColor = "#2B2D42";
     themeChangeImg.style.backgroundImage="url(/assets/Night.jpg)";
     divtodayHighlights.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
+    iconLocation.style.color = "#FFFFFF";
+    searchIcon.style.color = "#FFFFFF";
+    btnDark.src = "/assets/brightness (3).png";
+
     divForecast.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
     tdHighDiv1.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
     tdHighDiv2.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
@@ -591,26 +600,18 @@ btnDark.addEventListener("click",()=>{
     foreDay1.style.color = "#FFFFFF";
     foreDay2.style.color = "#FFFFFF";
     foreDay3.style.color = "#FFFFFF";
-    foreDay4.style.color = "#FFFFFF";
-    foreDay5.style.color = "#FFFFFF";
 
     foreDay1Temp.style.color = "#FFFFFF";
     foreDay2Temp.style.color = "#FFFFFF";
     foreDay3Temp.style.color = "#FFFFFF";
-    foreDay4Temp.style.color = "#FFFFFF";
-    foreDay5Temp.style.color = "#FFFFFF";
 
     foreDay1Humidity.style.color = "#FFFFFF";
     foreDay2Humidity.style.color = "#FFFFFF";
     foreDay3Humidity.style.color = "#FFFFFF";
-    foreDay4Humidity.style.color = "#FFFFFF";
-    foreDay5Humidity.style.color = "#FFFFFF";
 
     foreDay1Visibility.style.color = "#FFFFFF";
     foreDay2Visibility.style.color = "#FFFFFF";
     foreDay3Visibility.style.color = "#FFFFFF";
-    foreDay4Visibility.style.color = "#FFFFFF";
-    foreDay5Visibility.style.color = "#FFFFFF";
 
     h4Temperature.style.color = "#FFFFFF";
     h4Humidity.style.color = "#FFFFFF";
@@ -661,10 +662,31 @@ btnDark.addEventListener("click",()=>{
     historyDay6TempText.style.color = "#FFFFFF";
     historyDay7TempText.style.color = "#FFFFFF";
 
+    btnLogin.style.color = "#FFFFFF";
+    currentLocTemp.style.color = "#FFFFFF";
+    currentLocTemp.style.color = "#FFFFFF";
+    citiName.style.color = "#FFFFFF";
+    timeLbl.style.color = "#FFFFFF";
+    dayLbl.style.color = "#FFFFFF";
+    textHistory.style.color = "#FFFFFF";
+    historyDateLbl.style.color = "#FFFFFF";
+    divCalender.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
+    calenderDateInput.style.backgroundColor = "#FFFFFF";
+    btnSelectDate.style.backgroundColor = "#FFFFFF"; 
+
+    imgThermometer.src = "/assets/thermometer.png";
+    imgHumidity.src = "/assets/humidity.png";
+    imgWindy.src = "/assets/windy.png";
+    imgUv.src = "/assets/rays (1).png";
+    imgWitness.src = "/assets/witness.png";
+    imgBarometer.src = "/assets/barometer.png";
+
     modeSelector++;
 
   }
 })
+
+
 
 
 

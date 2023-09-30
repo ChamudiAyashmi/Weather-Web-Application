@@ -265,13 +265,13 @@ label{
     
 }
 .forecast table{
-    width: 100%;
-    margin-left: 3%;
+    width: 85%;
+    margin-left: 6%;
     /* margin-right: 3%; */
     /* margin-top: %; */
 }
 table tr{
-    height: 25px;
+    height: 100px;
 }
 table td{
     color: white;
@@ -533,15 +533,14 @@ table td img{
     background: white;
     color: black;
     font-size: 18px;
-    width: 152px;
+    width: 30%;
     height: 35px;
     border-radius: 8px;
     border: none;
     
 }
 .selectDate:hover{
-    color: white;
-    background-color: black;
+   border: 2px solid black;
 }
 /* .font-change{
     color: black;

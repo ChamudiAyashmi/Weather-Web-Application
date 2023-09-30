@@ -15,11 +15,9 @@
                 <img src="assets/Logo.png" alt="Logo" width="80" height="" class="logo">
             </a>
             <div class="my-nav">
-                <button class="my-btn-login">Login</button>
+                <button class="my-btn-login" id="btn-login">Login</button>
                 <button class="my-btn-signUp">Sign Up</button>
-                <img id="btnDark" src="assets/brightness (3).png" alt="">
-                <!-- <button class="dark-light" id="btnDark">dark</button> -->
-                
+                <img id="btnDark" src="assets/brightness (3).png" alt="">                
             </div>
             </div>
           </nav>
@@ -33,11 +31,11 @@
             
             <div class="weather-deatils">
                 <div class="location">
-                    <div class="div-img"><label id="current-loc-temperarure" for="" class="temp"></label><br>
+                    <div class="div-img"><label id="current-loc-temperarure" for="" class="temp">25℃</label><br>
                     <img class="sun" id="current-loc-weather-img" src="assets/cloudy-day.png" alt="">
                     </div>          
-                    <i class='bx bx-map' ></i>          
-                    <label id="cityName" class="lbl-location" for="">Panadura,Sri Lanka</label>
+                    <i class='bx bx-map' id="iconLocation"></i>          
+                    <label id="cityName" class="lbl-location" for="">Panadura</label>
 
                     
                     
@@ -61,7 +59,7 @@
                             <h4 class="card-heading text" id="h4-temperature">Temperature</h4>
                             <div class="box">
                                 <div class="weather-icons">
-                                    <img src="assets/thermometer.png" alt="">
+                                    <img id="img-thermometer" src="assets/thermometer.png" alt="">
                                 </div>
                                 <div class="weather-deatils-values">
                                     <label id="lblTemperature" for="">22.5 ℃</label>
@@ -73,7 +71,7 @@
                             <h4 id="h4-humidity">Humidity</h4>
                             <div class="box">
                                 <div class="weather-icons">
-                                    <img src="assets/humidity.png" alt="">
+                                    <img id="img-humidity" src="assets/humidity.png" alt="">
                                 </div>
                                 <div class="weather-deatils-values">
                                     <label id="lblHumidity" for="">94%</label>
@@ -86,7 +84,7 @@
                             <h4 id="h4-windSpeed">Wind Speed</h4>
                             <div class="box">
                                 <div class="weather-icons">
-                                    <img src="assets/windy.png" alt="">
+                                    <img id="img-windy" src="assets/windy.png" alt="">
                                 </div>
                                 <div class="weather-deatils-values">
                                     <label id="lblWindSpeed" for="">11km/h</label>
@@ -101,7 +99,7 @@
                             <h4 id="h4-uv">UV</h4>
                             <div class="box">
                                 <div class="weather-icons">
-                                    <img src="assets/rays (1).png" alt="">
+                                    <img id="img-ray" src="assets/rays (1).png" alt="">
                                 </div>
                                 <div class="weather-deatils-values">
                                     <label id="lblUv" for="">1</label>
@@ -114,7 +112,7 @@
                             <h4 id="h4-visibility">Visibility</h4>
                             <div class="box">
                                 <div class="weather-icons">
-                                    <img src="assets/witness.png" alt="">
+                                    <img id="img-witness" src="assets/witness.png" alt="">
                                 </div>
                                 <div class="weather-deatils-values">
                                     <label id="lblVisibility" for="">9km</label>
@@ -126,7 +124,7 @@
                             <h4 id="h4-pressure">Pressure</h4>
                             <div class="box">
                                 <div class="weather-icons">
-                                    <img src="assets/barometer.png" alt="">
+                                    <img id="img-barometer" src="assets/barometer.png" alt="">
                                 </div>
                                 <div class="weather-deatils-values">
                                     <label id="lblPressure" for="">1010hPa</label>
@@ -162,20 +160,7 @@
                                 <td id="day3-humidity">50%</td>
                                 <td id="day3-visibility">16mPh</td>
                             </tr>
-                            <tr>
-                                <td id="day4">Tuesday</td>
-                                <td><img src="..." id="day4-img" alt=""></td>
-                                <td id="day4-temp">35℃</td>
-                                <td id="day4-humidity">50%</td>
-                                <td id="day4-visibility">16mPh</td>
-                            </tr>
-                            <tr>
-                                <td id="day5">Tuesday</td>
-                                <td><img src="..." id="day5-img" alt=""></td>
-                                <td id="day5-temp">35℃</td>
-                                <td id="day5-humidity">50%</td>
-                                <td id="day5-visibility">16mPh</td>
-                            </tr>
+                         
                         </table>
 
 
@@ -273,7 +258,7 @@
                 <div class="map">
                     <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63397.333762227034!2d79.88823614334623!3d6.729119718216145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae24616c169e7c3%3A0xd21e80c970651d56!2sPanadura!5e0!3m2!1sen!2slk!4v1695483871400!5m2!1sen!2slk" width="610" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
                 </div>
-                <div class="calender">
+                <div class="calender" id="div-calender">
                     <h3 id="history-text">History</h3>
                     <hr>
                     <div class="form-group">
@@ -365,7 +350,6 @@
             </div>
            
         </section>
-    
 
     </div>
 
