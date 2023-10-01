@@ -139,10 +139,10 @@ let historyDateLabel = document.getElementById("historyDateLabel");
 
 
 
- async function BtnSelectDateOnClick(cityForHistory){
-
-  console.log("c :" +cityForHistory);
-  var c = cityForHistory;
+ async function BtnSelectDateOnClick(){
+  const searchbarValue = $("#searchbar-text");
+  var searchbarTypedText = searchbarValue.val();
+  console.log(searchbarTypedText);
 
   var inputDateValue = inputDate.value;
   console.log(inputDateValue);
@@ -151,10 +151,10 @@ let historyDateLabel = document.getElementById("historyDateLabel");
   try {
     const historyRes = await $.ajax({
       method: "GET",
-      url: `https://api.weatherapi.com/v1/history.json?dt=${inputDateValue}&key=89cc63fe3a254352b8d132020231609&q=${c}`,
+      url: `https://api.weatherapi.com/v1/history.json?dt=${inputDateValue}&key=89cc63fe3a254352b8d132020231609&q=${searchbarTypedText}`,
     });
+    console.log("specific his");
     console.log(historyRes);
-    // console.log("cityname :"+cityName);
 
   } catch (error) {
     console.error("Error fetching weather data:", error);
@@ -216,7 +216,7 @@ async function getLocation(latitude,longitude){
   city = cityData[0].name;
   console.log("Current Location : "+city);
   setWeather(city);
-  BtnSelectDateOnClick(city);
+  // BtnSelectDateOnClick(city);
 }
 
 async function setWeather(cityName) {

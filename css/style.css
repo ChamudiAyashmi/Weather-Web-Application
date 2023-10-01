@@ -11,15 +11,6 @@ body{
     width: 100%;
     height: 2700px;
 }
-body.light{
-    background-color: #D9D9D9;
-}
-
-
-.my-navbar-bg-body-tertiary{
-    position: sticky;
-
-}
 .my-container-fluid{
     display: flex; 
     flex-direction: row;
@@ -128,10 +119,18 @@ body.light{
     margin-top: 1%;
     /* border: 1px solid white; */
 }
+.local-time label{
+    color: white;
+    font-size: 30px;
+}
 label{
     color: white;
     font-size: 30px;
     /* border: 1px solid white; */
+}
+.lbl-location{
+    color: white;
+    font-size: 30px;
 }
 .div-img{
     /* border: 1px solid white; */
@@ -211,7 +210,7 @@ label{
     display: flex;
 }
 .temperature{
-    width: 50%;
+    width: 250px;
     margin: 3%;
     height: 161.99px;
     background: rgba(217, 217, 217, 0.22);
@@ -243,7 +242,7 @@ label{
     padding: 3%;
  }
 .weather-icons img{
-    width: 50%;
+    width: 30px;
 }
 .weather-deatils-values{
     /* border: 1px solid black; */
@@ -348,7 +347,7 @@ table td img{
     margin: 5%;
 }
 .weather-img img{
-    width: 40%;
+    width: 60px;
     margin-left: 30%;
 }
 .temp-value{
@@ -427,7 +426,7 @@ table td img{
 
 }
 .starter{
-    width: 25%;
+    width: 400px;
     height: 500px;
     margin-left: 20%;
     margin-right: 7%;
@@ -439,7 +438,7 @@ table td img{
     border: 1px solid white;
 }
 .pro{
-    width: 25%;
+    width: 400px;
     height: 500px;
     /* margin-left: 3%; */
     margin-right: 15%;
@@ -501,7 +500,7 @@ table td img{
     color: white;
     font-size: 20px;
     background: #580AFF;
-    border-radius: 15px;
+    border-radius: 10px;
     border: none;
 }
 .history-date{
@@ -542,18 +541,408 @@ table td img{
 .selectDate:hover{
    border: 2px solid black;
 }
-/* .font-change{
-    color: black;
-} */
-/* 
-.dark{
-    background-color: gray;
-} */
-
-/* .Dark{
-    color: white;
+.alert{
+    
+    background: rgba(217, 217, 217, 0.28);
+    border-radius: 10px;
+    margin-top: 0.5%;
+    padding: 0.5%;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.alert:hover{
+    border: 1PX solid red;
+}
+.alert label{
+    font-size: 20px;
+    color: red;
 }
 
-.Light{
-    color: black;
-} */
+@media (max-width: 1440px) {
+    .section2{
+        margin-top: 6%;
+    }
+    .temp{
+        font-size: 50px;
+    }
+    .local-time label{
+        color: white;
+        font-size: 40px;
+    }
+    .lbl-location{
+        color: white;
+        font-size: 40px;
+    }
+    .local-time{
+        margin-left: 30%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .section2{
+        margin-top: -12%;
+    }
+    .location{
+        width: 50%;
+        margin-top: -10%;
+    }
+    .local-time{
+        margin-left: 30%;
+        margin-top: -10%;
+    }
+    .local-time label{
+        color: white;
+        font-size: 30px;
+    }
+    .lbl-location{
+        color: white;
+        font-size: 30px;
+    }
+    .temp{
+        font-size: 40px;
+    }
+    .image{
+        height: 70vh;
+    }
+    .my-btn-signUp{
+        margin-top: 1.5%;
+        margin-left: 8%;
+        width: 145px;
+        height: 40px;
+        font-size: 18px;
+    }
+    .today-highlights{
+        width: 55%;
+
+    }
+    .today-highlights h2{
+        font-size: 32px;
+        
+    }
+    .forecast h2{
+        font-size: 32px;
+        
+    }
+    .temperature h4{
+       font-size: 15px;
+    }
+    .section3 h2{
+        font-size: 32px;
+    }
+    .calender h3{
+        font-size: 32px;
+    }
+    .starter{
+        width: 480px;
+        height: 500px;
+        margin-left: 12%;
+        margin-right: 7%;
+    }
+    .pro{
+        width: 480px;
+        height: 500px;
+        margin-right: 12%;
+        background: rgba(255, 255, 255, 0.1);
+        box-shadow: 10px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 15px;   
+    }
+
+    /* tablet max width 768 */
+
+    @media (max-width: 768px){
+        .section2{
+            margin-top: -26%;
+        }
+
+        .logo{
+            width: 50px;
+        }
+        .my-btn-signUp{
+            margin-top: 1.5%;
+            margin-left: 8%;
+            width: 140px;
+            height: 38px;
+            font-size: 16px;
+        }
+        .my-nav img{
+            width: 30px;
+            height: 30px;
+            margin-top: 3%;
+            margin-left: 5%;
+        }
+        .location{
+            width: 50%;
+            margin-top: -14%;
+        }
+        .local-time{
+            margin-left: 30%;
+            margin-top: -14%;
+        }
+        .local-time label{
+            color: white;
+            font-size: 25px;
+        }
+        .lbl-location{
+            color: white;
+            font-size: 25px;
+        }
+        .temp{
+            font-size:30px;
+        }
+        .image{
+            height: 60vh;
+        }
+        .bx{
+            font-size: 20px;
+        }
+        .today-highlights h2{
+            font-size: 28px;
+        }
+        .forecast h2{
+            font-size: 28px;
+        }
+        .calender h3{
+            font-size: 28px;
+        }
+        .temperature h4{
+            margin-top: 15px;
+            margin-left: 10px;
+           font-size: 13px;
+        }
+        .temperature{
+            width: 200px;
+            margin: 2%;
+            height: 160px;
+        }
+        .weather-deatils-values label{
+            font-size: 19px;
+        } 
+        .weather-icons img{
+            width: 25px;
+        }
+        .forecast table{
+            width: 100%;
+            margin-left: 2%;
+        }
+        table td{
+            font-size: 16px;
+        }
+        table td img{
+            width: 40px;
+        }
+        .date label{
+            font-size: 15px;
+        }
+        .temp-value label{
+            font-size: 15px;
+        
+        }
+        .weather-img img{
+            width: 35px;
+            margin-left: 30%;
+        }
+        .selectDate{
+            font-size: 15px;
+            width: 110px;
+            height: 35px;
+        }
+        .starter{
+            width: 490px;
+            height: 500px;
+            margin-left: 10%;
+            margin-right: 7%;
+        }
+        .pro{
+            width: 490px;
+            margin-right: 10%;   
+        }
+        .hedding h3{
+            font-size: 28px;
+        }
+        .hedding label{
+            font-size: 28px;
+        }
+        .text p{
+            font-size: 18px;
+        }
+        .button-div button{
+            width: 150px;
+            height: 35px;
+            font-size: 18px;
+           
+        }
+    }
+
+    /* Mobile small max width 320 */
+
+    @media (max-width: 320px){
+        .section2{
+            margin-top: -115%;
+        }
+
+        .my-btn-signUp{
+            margin-top: 1.5%;
+            margin-left: 8%;
+            width: 140px;
+            height: 35px;
+            font-size: 16px;
+        }
+        .my-btn-login{
+            font-size: 18px;
+         
+        }
+        .my-nav img{
+            width: 20px;
+            height: 20px;
+        }
+        .image{
+            height: 35vh;
+        }
+        .location{
+            width: 50%;
+            margin-top: -65%;
+        }
+        .local-time{
+            margin-left: 15%;
+            margin-top: -65%;
+        }
+        .local-time label{
+            color: white;
+            font-size: 20px;
+        }
+        .lbl-location{
+            color: white;
+            font-size: 20px;
+        }
+        .temp{
+            font-size:25px;
+        }
+        .weather-details2{
+            width: 100%;
+            height: 500px;
+            margin-right: 3%;
+            display: flex;
+            flex-direction: column;
+        }
+        .search-bar{
+            height: 30px;
+            font-size: 16px;
+          
+        }
+        .today-highlights{
+            width: 100%;
+            height: 600px;
+          
+        }
+        .today-highlights h2{
+            font-size: 25px;
+        }
+        .forecast h2{
+            font-size: 25px;
+        }
+        .calender h3{
+            font-size: 25px;
+        }
+        .temperature{
+            width: 150px;
+            margin-left: 1%;
+            margin-right: 1%;
+            margin-top: 5%;
+            height: 130px;
+        }
+        .today-highlights-div2{
+            margin-top: -50px;
+            height: 165px;
+        }
+        .today-highlights{
+            width: 100%;
+            height: 510px; 
+        }
+        .forecast{
+            margin-top: 25px;
+            width: 100%;
+            height: 510px;
+            margin-left: 1%;
+            margin-right: 5%;
+    
+        }
+        .weather-deatils-values label{
+            font-size: 17px;
+        } 
+        .weather-icons img{
+            width: 20px;
+        }
+        .section3{
+            margin-top: 220px;
+        }
+        .section3 h2{
+            font-size: 25px;
+        }
+        .previous-weather{
+            height: 1200px;
+            display: flex;
+            flex-direction: column;
+            margin-right: 3%;
+            margin-left: 3%;
+        }
+        .weather-data{
+            /* border: 1px solid white; */
+            width: 150px;
+            height: 250px;
+            margin-left: 25%;
+            margin-top: 2%;
+            background: rgba(255, 255, 255, 0.17);
+            box-shadow: 5px 8px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 15px;
+        }
+        .section4{
+            margin-top: 900px;
+        }
+        .section4-div{
+            display: flex;
+            flex-direction: column;
+        }
+        .map{
+            height: 300px;
+            width: 90%;
+            margin-left: 3%;
+            margin-right: 3%;
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 10px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 15px;
+         }
+         .map iframe{
+            border-radius: 15px;
+            width: 100%;
+            height: 300px;
+        }.calender{
+            margin-top: 20px;
+            height: 400px;
+            width: 92%;
+        }
+        .selectDate{
+            font-size: 15px;
+            width: 90px;
+            height: 32px;
+        }
+        .section5-div{
+            margin-top: 210px;
+        }
+        .section5-div{
+            display: flex;
+            flex-direction: column;
+        }
+        .starter{
+            width: 92%;
+            margin-left: 3%;
+        }
+        .pro{
+            margin-top: 20px;
+            width: 92%;
+            margin-left: 3%;
+        }
+    }
+}
+
+
+
