@@ -569,7 +569,7 @@ btnDark.addEventListener("click",()=>{
 
   }else{
     document.body.style.backgroundColor = "#2B2D42";
-    themeChangeImg.style.backgroundImage="url(../assets/Night.jpg)";
+    themeChangeImg.style.backgroundImage="url(../assets/night.jpg)";
     divtodayHighlights.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
     iconLocation.style.color = "#FFFFFF";
     searchIcon.style.color = "#FFFFFF";
