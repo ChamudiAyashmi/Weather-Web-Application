@@ -454,7 +454,7 @@ let btnDark = document.getElementById("btnDark");
 btnDark.addEventListener("click",()=>{
   if(modeSelector%2==0){
     document.body.style.backgroundColor = "#D9D9D9";
-    themeChangeImg.style.backgroundImage="url(../assets/morning.jpg)";
+    themeChangeImg.style.backgroundImage="url(https://fpdl.in/uploads/20231001081028_[fpdl.in]_sunrise-rural-area-with-pathway_116220-82_large.jpg)";
     divtodayHighlights.style.backgroundColor = "#FFFFFF";
     divForecast.style.backgroundColor = "#FFFFFF";
     iconLocation.style.color = "#000";
