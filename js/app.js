@@ -569,7 +569,7 @@ btnDark.addEventListener("click",()=>{
 
   }else{
     document.body.style.backgroundColor = "#2B2D42";
-    themeChangeImg.style.backgroundImage="url(https://fpdl.in/uploads/20231001081815_[fpdl.in]_night-ocean-landscape-full-moon-stars-shine_107791-7397_large.jpg)";
+    themeChangeImg.style.backgroundImage="url(https://fpdl.in/uploads/20231001081815_[fpdl.in]_night-ocean-landscape-full-moon-stars-shine_107791-7397_medium.jpg)";
     divtodayHighlights.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
     iconLocation.style.color = "#FFFFFF";
     searchIcon.style.color = "#FFFFFF";
