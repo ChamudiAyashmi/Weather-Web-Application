@@ -164,9 +164,9 @@ let historyDateLabel = document.getElementById("historyDateLabel");
 }
 
 
-const searchUrl = "http://api.weatherapi.com/v1/search.json?key=89cc63fe3a254352b8d132020231609&q="
+const searchUrl = "https://api.weatherapi.com/v1/search.json?key=89cc63fe3a254352b8d132020231609&q="
 
-const currentUrl = "http://api.weatherapi.com/v1/current.json?key=89cc63fe3a254352b8d132020231609&q="
+const currentUrl = "https://api.weatherapi.com/v1/current.json?key=89cc63fe3a254352b8d132020231609&q="
 
 const forecastUrl = "https://api.weatherapi.com/v1/forecast.json?key=89cc63fe3a254352b8d132020231609&days=6&q="
 
