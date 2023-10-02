@@ -6,7 +6,6 @@
 }
 body{
     background-color: #2B2D42;
-    /* background: linear-gradient(143.03deg, #333F52 1.37%, rgba(29, 51, 84, 0) 78.53%);  */
     position: relative;
     width: 100%;
     height: 2700px;
@@ -53,7 +52,6 @@ body{
     border: none;
     cursor: pointer;
 }
-
 .dark-light{
     height: 35px;
     width: 150px;
@@ -70,8 +68,6 @@ body{
 }
 .section1{
     height: 595px;
-    /* border: 1px solid white; */
-
 }
 .image{
     height: 80vh;
@@ -83,7 +79,6 @@ body{
     background-image: url("../assets/backgroundIMG.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    /* https://fpdl.in/uploads/20231001081815_[fpdl.in]_night-ocean-landscape-full-moon-stars-shine_107791-7397_medium.jpg */
 }
 .search-bar{
     width: 100%;
@@ -110,7 +105,6 @@ body{
 .weather-deatils{
     display: flex;
     margin-top: 250px;
-
 }
 .location{
     width: 50%;
@@ -118,7 +112,6 @@ body{
 .local-time{
     margin-left: 35%;
     margin-top: 1%;
-    /* border: 1px solid white; */
 }
 .local-time label{
     color: white;
@@ -127,14 +120,12 @@ body{
 label{
     color: white;
     font-size: 30px;
-    /* border: 1px solid white; */
 }
 .lbl-location{
     color: white;
     font-size: 30px;
 }
 .div-img{
-    /* border: 1px solid white; */
     display: flex;
     flex-direction: row;
 }
@@ -144,11 +135,9 @@ label{
     position: absolute;
     margin-left: 155px;
     margin-top: -1px;
-    /* border: 1px solid white; */
 }
 .temp{
     font-size: 50px;
-    /* border: 1px solid white; */
 }
 .search{
     display: flex;
@@ -158,14 +147,11 @@ label{
     border-radius: 10px;
     padding: 5px;
 }
-
 .section2{
-    /* border: 1px solid white; */
     width: 100%;
     height: 540px;
 }
 .weather-details2{
-    /* border: 1px solid white; */
     width: 100%;
     height: 50px;
     margin-right: 3%;
@@ -205,7 +191,6 @@ label{
    
 }
 .today-highlights-div1{
-    /* border: 1px solid white; */
     width: 100%;
     height: 200px;
     display: flex;
@@ -221,7 +206,6 @@ label{
 .temperature:hover{
     border: 1px solid white;
 }
-
 .temperature h4{
     color: white;
     margin-left: 6%;
@@ -230,7 +214,6 @@ label{
     font-family: 'Poppins', sans-serif;
 }
 .box{
-    /* border: 1px solid white; */
     display: flex;
     flex-direction: row;
     margin-left: 5%;
@@ -238,7 +221,6 @@ label{
     margin-top: 7%;
 }
 .weather-icons{
-    /* border: 1px solid red; */
     width: 40%;
     padding: 3%;
  }
@@ -246,7 +228,6 @@ label{
     width: 30px;
 }
 .weather-deatils-values{
-    /* border: 1px solid black; */
     padding: 5%;
 }
 .weather-deatils-values label{
@@ -262,20 +243,16 @@ label{
     margin-top: 7%;
     margin-bottom: 2%;
     font-size: 35px;
-    
 }
 .forecast table{
     width: 85%;
     margin-left: 6%;
-    /* margin-right: 3%; */
-    /* margin-top: %; */
 }
 .forecast table tr{
     height: 100px;
 }
 .forecast table td{
     color: white;
-    /* padding: 1%; */
     padding-top: 3%;
     font-size: 20px;
 }
@@ -285,7 +262,6 @@ label{
 .forecast hr{
     margin-left: 5%;
     margin-right: 5%;
-   
 }
 .day-forecast{
     border: 1px solid white;
@@ -296,7 +272,6 @@ label{
     padding-top: 3%;
 }
 .section3{
-    /* border: 1px solid white; */
     height: 350px;
 }
 .section3 h2{
@@ -310,14 +285,11 @@ label{
     margin-top: 1%;
 }
 .previous-weather{
-    /* border: 1px solid white; */
     height: 50px;
     display: flex;
     margin-right: 3%;
-   
 }
 .weather-data{
-    /* border: 1px solid white; */
     width: 100%;
     height: 244px;
     margin-left: 3%;
@@ -330,7 +302,6 @@ label{
     border: 1px solid white;
 }
 .date{
-    /* border: 1px solid white; */
     height: 25%;
     margin-top: 10%;
     margin-left: 5%;
@@ -343,7 +314,6 @@ label{
     font-size: 20px;
 }
 .weather-img{
-    /* border: 1px solid white; */
     height: 25%;
     margin: 5%;
 }
@@ -352,35 +322,29 @@ label{
     margin-left: 30%;
 }
 .temp-value{
-    /* border: 1px solid white; */
     height: 25%;
     margin-top: 25%;
     text-align: center;
-    
 }
 .temp-value label{
     font-size: 20px;
     margin-top: 5%;
 }
 .section4{
-    /* border: 1px solid white; */
     height: 530px;
 }
 .section4-div{
-    /* margin-left: 3%; */
-    /* margin-right: 3%; */
     margin-top: 1%;
     display: flex;
 }
 .map-d{
-   /* border: 1px solid white; */
     height: 500px;
-   width: 80%;
-   margin-left: 7%;
-   margin-right: 3%;
-   background: rgba(255, 255, 255, 0.1);
-   box-shadow: 10px 4px 4px rgba(0, 0, 0, 0.25);
-   border-radius: 15px;
+    width: 80%;
+    margin-left: 7%;
+    margin-right: 3%;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 10px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
 }
 .map-d iframe{
     border-radius: 15px;
@@ -423,14 +387,11 @@ label{
     width: 60px;
 }
 .section5{
-    /* border: 1px solid white; */
     height: 500px;
 }
 .section5-div{
-    /* border: 1px solid white; */
     margin-top: 1%;
     display: flex;
-
 }
 .starter{
     width: 400px;
@@ -447,7 +408,6 @@ label{
 .pro{
     width: 400px;
     height: 500px;
-    /* margin-left: 3%; */
     margin-right: 15%;
     background: rgba(255, 255, 255, 0.1);
     box-shadow: 10px 4px 4px rgba(0, 0, 0, 0.25);
@@ -457,7 +417,6 @@ label{
     border: 1px solid white;
 }
 .hedding{
-    /* border: 1px solid white; */
     height: 10%;
     margin: 5%;
     margin-top: 7%;
@@ -468,14 +427,12 @@ label{
     font-size: 30px;
 }
 .content{
-    /* border: 1px solid white; */
     height: 50%;
     margin-left: 8%;
     margin-right: 7%;
     margin-top: 10%;
 }
 .button-div{
-    /* border: 1px solid white; */
     height: 10%;
     margin: 5%;
     display: flex;
@@ -483,12 +440,10 @@ label{
     align-items: center;
 }
 .boxes{
-    /* border: 1px solid white; */
     height: 20%;
     display: flex;
 }
 .icon{
-    /* border: 1px solid white; */
     width: 10%;
 }
 .icon img{
@@ -513,22 +468,15 @@ label{
 .history-date{
     font-size: 22px;
     margin-left: 5%;
-    
 }
 .table1{
     margin-top: 3%;
     margin-left: 5%;
-    /* margin-right: 5%; */
-    /* margin: 5%; */
     width: 80%;
-    
 }
 .table2{
     margin-left: 5%;
-    /* margin-right: 5%; */
-    /* margin: 5%; */
     width: 80%;
-    
 }
 .table1 tr{
     width: 100%;
@@ -543,13 +491,11 @@ label{
     height: 35px;
     border-radius: 8px;
     border: none;
-    
 }
 .selectDate:hover{
    border: 2px solid black;
 }
 .alert{
-    
     background: rgba(217, 217, 217, 0.28);
     border-radius: 10px;
     margin-top: 0.5%;
@@ -564,7 +510,6 @@ label{
     font-size: 20px;
     color: red;
 }
-
 .historyTbl1{
     margin-top: 3%;
     width: 100%;
@@ -578,7 +523,6 @@ label{
     color: white;
     font-size: 25px;
     margin-left: 3%;
-    
 }
 .historyTbl2{
     width: 100%;
@@ -589,7 +533,6 @@ label{
 .historyTbl2 td{
     color: white;
     font-size: 20px;
-   
 }
 .histr{
     height: 40px;
@@ -653,15 +596,12 @@ label{
     }
     .today-highlights{
         width: 55%;
-
     }
     .today-highlights h2{
         font-size: 32px;
-        
     }
     .forecast h2{
         font-size: 32px;
-        
     }
     .temperature h4{
        font-size: 15px;
@@ -809,7 +749,6 @@ label{
             width: 150px;
             height: 35px;
             font-size: 18px;
-           
         }
     }
 
@@ -819,7 +758,6 @@ label{
         .section2{
             margin-top: -115%;
         }
-
         .my-btn-signUp{
             margin-top: 1.5%;
             margin-left: 8%;
@@ -872,7 +810,6 @@ label{
         .today-highlights{
             width: 100%;
             height: 600px;
-          
         }
         .today-highlights h2{
             font-size: 25px;
@@ -904,7 +841,6 @@ label{
             height: 510px;
             margin-left: 1%;
             margin-right: 5%;
-    
         }
         .weather-deatils-values label{
             font-size: 17px;
@@ -921,19 +857,15 @@ label{
         .previous-weather{
             height: 1200px;
             display: flex;
-            flex-direction: column;
+            flex-wrap: wrap;
             margin-right: 3%;
             margin-left: 3%;
         }
         .weather-data{
-            /* border: 1px solid white; */
-            width: 280px;
+            width: 120px;
             height: 250px;
-            /* margin-left: 25%; */
             margin-top: 2%;
-            background: rgba(255, 255, 255, 0.17);
-            box-shadow: 5px 8px 4px rgba(0, 0, 0, 0.25);
-            border-radius: 15px;
+            margin-left: 6%;
         }
         .section4{
             margin-top: 900px;
@@ -943,7 +875,7 @@ label{
             flex-direction: column;
         }
         .map-d{
-            margin-top: 150px;
+            margin-top: -40px;
             height: 300px;
             width: 90%;
             margin-left: 3%;
@@ -974,7 +906,7 @@ label{
             flex-direction: column;
         }
         .starter{
-            margin-top: 150px;
+            margin-top: -40px;
             width: 92%;
             margin-left: 3%;
         }
@@ -990,7 +922,6 @@ label{
             color: white;
             font-size: 20px;
             margin-left: 3%;
-            
         }
         .historyTbl2{
             width: 100%;
@@ -1009,10 +940,18 @@ label{
         .history-date{
             font-size: 20px;
             margin-left: 5%;
-            
         }
         .hisImg{
             width: 40px;
+        }
+        .date label{
+            font-size: 18px;
+        }
+        .temp-value label{
+            font-size: 18px;
+        }
+        .weather-img img{
+            width: 50px;
         }
     }
 }

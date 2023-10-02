@@ -87,7 +87,6 @@ const forecastDay5Visibility =$("#day5-visibility");
 
 //----------------------------set history weather data---------------------------
 
-
 const historyDay1 = $("#history-day1");
 const historyDay2 = $("#history-day2");
 const historyDay3 = $("#history-day3");
@@ -118,7 +117,6 @@ function searchIconOnclick(){
   var typedText = searchbar.val();
   city=typedText;
 
-
   $.ajax({
     method : "GET",
     url : `https://api.weatherapi.com/v1/current.json?key=89cc63fe3a254352b8d132020231609 &q=${city}`,
@@ -142,7 +140,6 @@ function searchIconOnclick(){
 
 let inputDate = document.getElementById("date-input");
 let historyDateLabel = document.getElementById("historyDateLabel");
-
 
 const searchUrl = "https://api.weatherapi.com/v1/search.json?key=89cc63fe3a254352b8d132020231609&q="
 
@@ -204,7 +201,6 @@ async function getLocation(latitude,longitude){
   setWeather(city);
 }
 
-
   const weatherCondition = $("#condition");
   const weatherAvgTemp = $("#historyAvgTemp");
   const sunrise = $("#sunrise");
@@ -246,7 +242,6 @@ async function BtnSelectDateOnClick(){
     console.error("Error fetching weather data:", error);
 
   }
-
 }
 
 async function setWeather(cityName) {
@@ -316,7 +311,6 @@ async function setWeather(cityName) {
   
   } catch (error) {
     console.error("Error fetching weather data:", error);
-
   }
 
   try {
@@ -735,7 +729,7 @@ btnDark.addEventListener("click",()=>{
 
     btnLogin.style.color = "#FFFFFF";
     currentLocTemp.style.color = "#FFFFFF";
-    currentLocTemp.style.color = "#FFFFFF";
+    searchbarText.style.color = "#FFFFFF";
     citiName.style.color = "#FFFFFF";
     timeLbl.style.color = "#FFFFFF";
     dayLbl.style.color = "#FFFFFF";
@@ -753,7 +747,6 @@ btnDark.addEventListener("click",()=>{
     imgBarometer.src = "assets/barometer.png";
 
     modeSelector++;
-
   }
 })
 
