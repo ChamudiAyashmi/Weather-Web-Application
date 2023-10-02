@@ -1,3 +1,7 @@
+var city;
+
+var map = L  .map('map').setView([0, 0], 13);
+var marker;
 function refreshTime() {
     const timeDisplay = document.getElementById("time");
     const dateString = new Date().toLocaleTimeString();
@@ -35,6 +39,13 @@ var day = String(sevenDaysAgo.getDate()).padStart(2, '0');
 // Create the "yyyy-mm-dd" formatted string
 var formattedDate = year + '-' + month + '-' + day;
 console.log(formattedDate);
+
+
+
+
+
+
+
 
 
 //----------------------set current weather data----------------------------
@@ -110,12 +121,14 @@ const historyDay7Img = $("#pre-day7-img");
 
 function searchIconOnclick(){
   const searchbar = $("#searchbar-text");
+
   var typedText = searchbar.val();
+  city=typedText;
 
 
   $.ajax({
     method : "GET",
-    url : `http://api.weatherapi.com/v1/current.json?key=89cc63fe3a254352b8d132020231609 &q=${typedText}`,
+    url : `http://api.weatherapi.com/v1/current.json?key=89cc63fe3a254352b8d132020231609 &q=${city}`,
     success : (resp) => {
     console.log(resp);
     console.log(resp.current.temp_c +"℃");
@@ -173,7 +186,7 @@ const forecastUrl = "https://api.weatherapi.com/v1/forecast.json?key=89cc63fe3a2
 const historyUrl = `https://api.weatherapi.com/v1/history.json?&dt=${formattedDate}&end_dt=${formattedDateToday}&key=89cc63fe3a254352b8d132020231609&q=`
 
 
-let city;
+
 
 
 // ----------------------set current location--------------------------
@@ -182,6 +195,20 @@ function location1(){
   const successs = (position)=>{
     const latitude = position.coords.latitude;
     const longitude = position.coords.longitude;
+
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+
+    marker = L.marker([latitude, longitude]).addTo(map);
+    // const circle = L.circle([latitude, longitude], { radius: accuracy }).addTo(map);
+
+
+    // map.fitBounds(circle.getBounds());
+    marker.setLatLng([latitude, longitude]).update();
+    map.setView([latitude, longitude]);
+
     const loca = `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${latitude}&longitude=${longitude}&localityLanguage=en`;
     $.ajax({
       method : "GET",
@@ -214,41 +241,64 @@ async function getLocation(latitude,longitude){
   console.log(search);
   console.log(cityData);
   city = cityData[0].name;
+  console.log(city);
   console.log("Current Location : "+city);
   setWeather(city);
-  BtnSelectDateOnClick(city);
 }
 
-async function BtnSelectDateOnClick(currentCity){
-  var c = currentCity;
-  console.log("current city :"+c);
 
-  const searchbarValue = $("#searchbar-text");
-  var searchbarTypedText = searchbarValue.val();
-  console.log(searchbarTypedText);
+  const weatherCondition = $("#condition");
+  const weatherAvgTemp = $("#historyAvgTemp");
+  const sunrise = $("#sunrise");
+  const sunset = $("#sunset");
+  const maxTemp = $("#maxTemp");
+  const minTemp = $("#minTemp");
+  const humid = $("#humid");
+  const imgHis = $("#imgHis");
+  const displayDivHistory = document.querySelector("#display-div-history");
+
+// document.getElementById("btnSelectDate").addEventListener("click",()=>{
+
+//   })
+
+async function BtnSelectDateOnClick(){
+ 
+  // const searchbarValue = $("#searchbar-text");
+  // var searchbarTypedText = searchbarValue.val();
+  // city=searchbarTypedText;
+
+  console.log(city);
 
   var inputDateValue = inputDate.value;
   console.log(inputDateValue);
   historyDateLabel.textContent=inputDateValue; 
 
   try {
-    console.log("current city :"+c);
-    const historyRes = await $.ajax({
+    const historyRes =await $.ajax({
       method: "GET",
-      url: `https://api.weatherapi.com/v1/history.json?dt=${inputDateValue}&key=89cc63fe3a254352b8d132020231609&q=${c}`,
+      url: `https://api.weatherapi.com/v1/history.json?key=89cc63fe3a254352b8d132020231609&dt=${inputDateValue}&q=${city}`,
     });
     console.log("specific his");
     console.log(historyRes);
+    weatherCondition.text(historyRes.forecast.forecastday[0].day.condition.text);
+    // console.log(historyRes.forecast.forecastday[0].day.condition.text);
+    weatherAvgTemp.text(historyRes.forecast.forecastday[0].day.avgtemp_c+"℃");
+    sunrise.text(historyRes.forecast.forecastday[0].astro.sunrise);
+    sunset.text(historyRes.forecast.forecastday[0].astro.sunset);
+    maxTemp.text(historyRes.forecast.forecastday[0].day.maxtemp_c+"℃");
+    minTemp.text(historyRes.forecast.forecastday[0].day.mintemp_c+"℃");
+    humid.text(historyRes.forecast.forecastday[0].day.avghumidity+"%");
+    imgHis.attr("src",historyRes.forecast.forecastday[0].day.condition.icon);
 
+    if(displayDivHistory){
+      displayDivHistory.style.display = "block";
+    }
   } catch (error) {
     console.error("Error fetching weather data:", error);
 
   }
 
 }
-
-
-
 
 async function setWeather(cityName) {
   try {
@@ -485,7 +535,7 @@ let btnDark = document.getElementById("btnDark");
 btnDark.addEventListener("click",()=>{
   if(modeSelector%2==0){
     document.body.style.backgroundColor = "#D9D9D9";
-    themeChangeImg.style.backgroundImage="url('../assets/morning.jpg')";
+    themeChangeImg.style.backgroundImage="url('../assets/morning_img.jpg')";
     divtodayHighlights.style.backgroundColor = "#FFFFFF";
     divForecast.style.backgroundColor = "#FFFFFF";
     iconLocation.style.color = "#000";
@@ -589,7 +639,7 @@ btnDark.addEventListener("click",()=>{
     divCalender.style.backgroundColor = "#FFFFFF";
     calenderDateInput.style.backgroundColor = "#D9D9D9";
     btnSelectDate.style.backgroundColor = "#D9D9D9";
-    imgThermometer.src = "/assets/thermometerBlack.png";
+    imgThermometer.src = "../assets/thermometerBlack.png";
     imgHumidity.src = "/assets/humidityBlack.png";
     imgWindy.src = "/assets/windyBlack.png";
     imgUv.src = "/assets/raysBlack.png";

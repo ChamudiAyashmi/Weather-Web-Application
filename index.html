@@ -1,57 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Sunrise</title>
     <link rel="stylesheet" href="css/style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
 
 <body class="page-body">
     <div class="my-container">
         <nav class="my-navbar-bg-body-tertiary">
             <div class="my-container-fluid">
-              <a class="my-navbar-brand" href="#">
-                <img src="assets/Logo.png" alt="Logo" width="80" height="" class="logo">
-            </a>
-            <div class="my-nav">
-                <button class="my-btn-login" id="btn-login">Login</button>
-                <button class="my-btn-signUp">Sign Up</button>
-                <img id="btnDark" src="assets/brightness (3).png" alt="">                
+                <a class="my-navbar-brand" href="#">
+                    <img src="assets/Logo.png" alt="Logo" width="80" height="" class="logo">
+                </a>
+                <div class="my-nav">
+                    <button class="my-btn-login" id="btn-login">Login</button>
+                    <button class="my-btn-signUp">Sign Up</button>
+                    <img id="btnDark" src="assets/brightness (3).png" alt="">
+                </div>
             </div>
-            </div>
-          </nav>
-    
+        </nav>
+
         <section class="section1">
             <div class="image" id="themeChangeImg">
                 <div class="search">
-                    <input id="searchbar-text" class="search-bar" type="text" placeholder="Search Location Here" >
+                    <input id="searchbar-text" class="search-bar" type="text" placeholder="Search Location Here">
                     <i onclick="searchIconOnclick()" id="secrch-icon" class='bx bx-search-alt-2'></i>
                 </div>
                 <!-- <div class="alert">
                     <label for="">No matching Location</label>
                 </div> -->
-                
-            
-            <div class="weather-deatils">
-                <div class="location">
-                    <div class="div-img"><label id="current-loc-temperarure" for="" class="temp">25℃</label><br>
-                    <img class="sun" id="current-loc-weather-img" src="assets/cloudy-day.png" alt="">
-                    </div>          
-                    <i class='bx bx-map' id="iconLocation"></i>          
-                    <label id="cityName" class="lbl-location" for="">Panadura</label>
 
-                    
-                    
-                    
-                </div>
-                
-                <div class="local-time">
-                    <label id="time" for="">2.58 PM</label><br>
-                    <label id="day" for="">Tuesday</label>
+
+                <div class="weather-deatils">
+                    <div class="location">
+                        <div class="div-img"><label id="current-loc-temperarure" for="" class="temp">25℃</label><br>
+                            <img class="sun" id="current-loc-weather-img" src="assets/cloudy-day.png" alt="">
+                        </div>
+                        <i class='bx bx-map' id="iconLocation"></i>
+                        <label id="cityName" class="lbl-location" for="">Panadura</label>
+
+
+
+
+                    </div>
+
+                    <div class="local-time">
+                        <label id="time" for="">2.58 PM</label><br>
+                        <label id="day" for="">Tuesday</label>
+                    </div>
                 </div>
             </div>
-        </div>
         </section>
         <section class="section2">
             <div class="weather-details2">
@@ -82,7 +85,7 @@
                                 </div>
 
                             </div>
-                            
+
                         </div>
                         <div class="temperature" id="tdHighDiv3">
                             <h4 id="h4-windSpeed">Wind Speed</h4>
@@ -110,7 +113,7 @@
                                 </div>
 
                             </div>
-                            
+
                         </div>
                         <div class="temperature" id="tdHighDiv5">
                             <h4 id="h4-visibility">Visibility</h4>
@@ -137,41 +140,41 @@
                             </div>
                         </div>
                     </div>
-    
+
                 </div>
                 <div class="forecast" id="div-forecast">
                     <h2 id="5-Day-Forecast-text">3-Day-Forecast</h2>
                     <hr>
-                        <table>
-                            <tr>
-                                <td id="day1">Monday</td>
-                                <td><img src="..." id="day1-img" alt=""></td>
-                                <td id="day1-temp">35℃</td>
-                                <td id="day1-humidity">50%</td>
-                                <td id="day1-visibility">16mPh</td>
-                            </tr>
-                            <tr>
-                                <td id="day2">Tuesday</td>
-                                <td><img src="..." id="day2-img" alt=""></td>
-                                <td id="day2-temp">35℃</td>
-                                <td id="day2-humidity">50%</td>
-                                <td id="day2-visibility">16mPh</td>
-                            </tr>
-                            <tr>
-                                <td id="day3">Tuesday</td>
-                                <td><img src="..." id="day3-img" alt=""></td>
-                                <td id="day3-temp">35℃</td>
-                                <td id="day3-humidity">50%</td>
-                                <td id="day3-visibility">16mPh</td>
-                            </tr>
-                         
-                        </table>
+                    <table>
+                        <tr>
+                            <td id="day1">Monday</td>
+                            <td><img src="" id="day1-img" alt=""></td>
+                            <td id="day1-temp">35℃</td>
+                            <td id="day1-humidity">50%</td>
+                            <td id="day1-visibility">16mPh</td>
+                        </tr>
+                        <tr>
+                            <td id="day2">Tuesday</td>
+                            <td><img src="" id="day2-img" alt=""></td>
+                            <td id="day2-temp">35℃</td>
+                            <td id="day2-humidity">50%</td>
+                            <td id="day2-visibility">16mPh</td>
+                        </tr>
+                        <tr>
+                            <td id="day3">Tuesday</td>
+                            <td><img src="" id="day3-img" alt=""></td>
+                            <td id="day3-temp">35℃</td>
+                            <td id="day3-humidity">50%</td>
+                            <td id="day3-visibility">16mPh</td>
+                        </tr>
+
+                    </table>
 
 
                 </div>
-    
+
             </div>
-    
+
         </section>
 
         <section class="section3">
@@ -259,61 +262,65 @@
         </section>
         <section class="section4">
             <div class="section4-div">
-                <div class="map">
-                    <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63397.333762227034!2d79.88823614334623!3d6.729119718216145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae24616c169e7c3%3A0xd21e80c970651d56!2sPanadura!5e0!3m2!1sen!2slk!4v1695483871400!5m2!1sen!2slk" width="610" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+                <div class="map-d" id="map">
+                    <!-- <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63397.333762227034!2d79.88823614334623!3d6.729119718216145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae24616c169e7c3%3A0xd21e80c970651d56!2sPanadura!5e0!3m2!1sen!2slk!4v1695483871400!5m2!1sen!2slk" width="610" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p> -->
                 </div>
                 <div class="calender" id="div-calender">
                     <h3 id="history-text">History</h3>
                     <hr>
                     <div class="form-group">
                         <input type="date" name="" id="date-input">
-                        <button class="selectDate" id="btnSelectDate" onclick="BtnSelectDateOnClick()">Select Date</button>
+                        <button class="selectDate" id="btnSelectDate" onclick="BtnSelectDateOnClick()">Select
+                            Date</button>
                     </div>
 
-                    <label class="history-date" id="historyDateLabel" for="">2023-09-26</label>
+                    <label class="history-date" id="historyDateLabel" for=""></label>
                     <hr>
-                    <table class="historyTbl1">
-                        <tr>
-                            <td>Condition</td>
-                            <td>image</td>
-                            <td class="hisTd">avg temp</td>
-                        </tr>
-                    </table>
-                    <hr>
-                    <table class="historyTbl2">
-                        <tr class="histr">
-                            <td>Sunrise</td>
-                            <td class="hisTd">05.59 AM </td>
+                    <div class="div-history" id="display-div-history">
+                        <table class="historyTbl1">
+                            <tr>
+                                <td id="condition">Condition</td>
+                                <td id="historyImage"><img id="imgHis" class="hisImg" src="assets/Logo.png" alt=""></td>
+                                <td id="historyAvgTemp" class="hisTd">avg temp</td>
+                            </tr>
+                        </table>
+                        <hr>
+                        <table class="historyTbl2">
+                            <tr class="histr">
+                                <td>Sunrise</td>
+                                <td id="sunrise" class="hisTd">05.59 AM </td>
 
-                        </tr>
-                        <tr></tr>
-            
-                        <tr class="histr">
-                            <td>Sunset</td>
-                            <td class="hisTd">06.02 PM</td>
-                            
-                        </tr>
-                        <tr class="histr">
-                            <td>Max temp</td>
-                            <td class="hisTd">29 ℃</td>
-                        </tr>
-                        <tr class="histr">
-                            <td>Min Temp</td>
-                            <td class="hisTd">25 ℃</td>
-                        </tr>
-                        <tr class="histr">
-                            <td>Humidity</td>
-                            <td class="hisTd">82 %</td>
-                        </tr>
-                    </table>
+                            </tr>
+                            <tr></tr>
 
-                    
-                  
+                            <tr class="histr">
+                                <td>Sunset</td>
+                                <td id="sunset" class="hisTd">06.02 PM</td>
 
-                
+                            </tr>
+                            <tr class="histr">
+                                <td>Max temp</td>
+                                <td id="maxTemp" class="hisTd">29 ℃</td>
+                            </tr>
+                            <tr class="histr">
+                                <td>Min Temp</td>
+                                <td id="minTemp" class="hisTd">25 ℃</td>
+                            </tr>
+                            <tr class="histr">
+                                <td>Humidity</td>
+                                <td id="humid" class="hisTd">82 %</td>
+                            </tr>
+                        </table>
+                    </div>
 
-                    
-                  
+
+
+
+
+
+
+
+
 
                 </div>
             </div>
@@ -328,24 +335,34 @@
                     <div class="content">
                         <div class="boxes">
                             <div class="icon"><img src="assets/check-mark (1).png" alt=""></div>
-                            <div class="text"><p id="st-point1">Limited calls per month</p></div>
+                            <div class="text">
+                                <p id="st-point1">Limited calls per month</p>
+                            </div>
                         </div>
-                     
+
                         <div class="boxes">
                             <div class="icon"><img src="assets/check-mark (1).png" alt=""></div>
-                            <div class="text"><p id="st-point2">Realtime Weather</p></div>
-                        </div>
-                        <div class="boxes">
-                            <div class="icon"><img src="assets/check-mark (1).png" alt=""></div>
-                            <div class="text"><p id="st-point3">Forecast Weather : 5 Days</p></div>
-                        </div>
-                        <div class="boxes">
-                            <div class="icon"><img src="assets/check-mark (1).png" alt=""></div>
-                            <div class="text"><p id="st-point4">Historical Weather : Last 7 Days</p></div>
+                            <div class="text">
+                                <p id="st-point2">Realtime Weather</p>
+                            </div>
                         </div>
                         <div class="boxes">
                             <div class="icon"><img src="assets/check-mark (1).png" alt=""></div>
-                            <div class="text"><p id="st-point5">Weather Alerts : No</p></div>
+                            <div class="text">
+                                <p id="st-point3">Forecast Weather : 5 Days</p>
+                            </div>
+                        </div>
+                        <div class="boxes">
+                            <div class="icon"><img src="assets/check-mark (1).png" alt=""></div>
+                            <div class="text">
+                                <p id="st-point4">Historical Weather : Last 7 Days</p>
+                            </div>
+                        </div>
+                        <div class="boxes">
+                            <div class="icon"><img src="assets/check-mark (1).png" alt=""></div>
+                            <div class="text">
+                                <p id="st-point5">Weather Alerts : No</p>
+                            </div>
                         </div>
 
 
@@ -355,46 +372,61 @@
                         <button>Get Started</button>
                     </div>
                 </div>
-            <div class="pro" id="proDiv">
-                <div class="hedding">
-                    <h3 id="pro-text">Pro</h3>
-                    <label for="" id="proPrice">$65 <span>/month</span></label>
-                </div>
-                <div class="content">
-                    <div class="boxes">
-                        <div class="icon"><img src="assets/check-mark (1).png" alt=""></div>
-                        <div class="text"><p id="pr-point1">Unlimited calls per month</p></div>
+                <div class="pro" id="proDiv">
+                    <div class="hedding">
+                        <h3 id="pro-text">Pro</h3>
+                        <label for="" id="proPrice">$65 <span>/month</span></label>
                     </div>
-                 
-                    <div class="boxes">
-                        <div class="icon"><img src="assets/check-mark (1).png" alt=""></div>
-                        <div class="text"><p id="pr-point2">Realtime Weather</p></div>
-                    </div>
-                    <div class="boxes">
-                        <div class="icon"><img src="assets/check-mark (1).png" alt=""></div>
-                        <div class="text"><p id="pr-point3">Forecast Weather : 14 Days</p></div>
-                    </div>
-                    <div class="boxes">
-                        <div class="icon"><img src="assets/check-mark (1).png" alt=""></div>
-                        <div class="text"><p id="pr-point4">Historical Weather</p></div>
-                    </div>
-                    <div class="boxes">
-                        <div class="icon"><img src="assets/check-mark (1).png" alt=""></div>
-                        <div class="text"><p id="pr-point5">Weather Alerts : Yes</p></div>
-                    </div>
+                    <div class="content">
+                        <div class="boxes">
+                            <div class="icon"><img src="assets/check-mark (1).png" alt=""></div>
+                            <div class="text">
+                                <p id="pr-point1">Unlimited calls per month</p>
+                            </div>
+                        </div>
 
-            </div>
-            <div class="button-div">
-                <button class="btn-getStarted">Get Started</button>
-            </div>
-            </div>
-           
+                        <div class="boxes">
+                            <div class="icon"><img src="assets/check-mark (1).png" alt=""></div>
+                            <div class="text">
+                                <p id="pr-point2">Realtime Weather</p>
+                            </div>
+                        </div>
+                        <div class="boxes">
+                            <div class="icon"><img src="assets/check-mark (1).png" alt=""></div>
+                            <div class="text">
+                                <p id="pr-point3">Forecast Weather : 14 Days</p>
+                            </div>
+                        </div>
+                        <div class="boxes">
+                            <div class="icon"><img src="assets/check-mark (1).png" alt=""></div>
+                            <div class="text">
+                                <p id="pr-point4">Historical Weather</p>
+                            </div>
+                        </div>
+                        <div class="boxes">
+                            <div class="icon"><img src="assets/check-mark (1).png" alt=""></div>
+                            <div class="text">
+                                <p id="pr-point5">Weather Alerts : Yes</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="button-div">
+                        <button class="btn-getStarted">Get Started</button>
+                    </div>
+                </div>
+
         </section>
 
     </div>
 
-<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-<script src="js/app.js"></script>
-    
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="js/app.js"></script>
 </body>
+
 </html>

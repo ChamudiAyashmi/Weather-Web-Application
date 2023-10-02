@@ -372,7 +372,7 @@ label{
     margin-top: 1%;
     display: flex;
 }
-.map{
+.map-d{
    /* border: 1px solid white; */
     height: 500px;
    width: 80%;
@@ -382,7 +382,7 @@ label{
    box-shadow: 10px 4px 4px rgba(0, 0, 0, 0.25);
    border-radius: 15px;
 }
-.map iframe{
+.map-d iframe{
     border-radius: 15px;
     width: 100%;
 }
@@ -415,6 +415,12 @@ label{
 .calender hr{
     margin-left: 5%;
     margin-right: 5%;
+}
+.div-history{
+    display: none;
+}
+.hisImg{
+    width: 60px;
 }
 .section5{
     /* border: 1px solid white; */
@@ -936,7 +942,7 @@ label{
             display: flex;
             flex-direction: column;
         }
-        .map{
+        .map-d{
             margin-top: 150px;
             height: 300px;
             width: 90%;
@@ -946,7 +952,7 @@ label{
             box-shadow: 10px 4px 4px rgba(0, 0, 0, 0.25);
             border-radius: 15px;
          }
-         .map iframe{
+         .map-d iframe{
             border-radius: 15px;
             width: 100%;
             height: 300px;
