@@ -41,13 +41,6 @@ var formattedDate = year + '-' + month + '-' + day;
 console.log(formattedDate);
 
 
-
-
-
-
-
-
-
 //----------------------set current weather data----------------------------
 
 const cityName = $("#cityName");
@@ -151,32 +144,6 @@ let inputDate = document.getElementById("date-input");
 let historyDateLabel = document.getElementById("historyDateLabel");
 
 
-
-//  async function BtnSelectDateOnClick(){
-//   const searchbarValue = $("#searchbar-text");
-//   var searchbarTypedText = searchbarValue.val();
-//   console.log(searchbarTypedText);
-
-//   var inputDateValue = inputDate.value;
-//   console.log(inputDateValue);
-//   historyDateLabel.textContent=inputDateValue; 
-
-//   try {
-//     const historyRes = await $.ajax({
-//       method: "GET",
-//       url: `https://api.weatherapi.com/v1/history.json?dt=${inputDateValue}&key=89cc63fe3a254352b8d132020231609&q=${searchbarTypedText}`,
-//     });
-//     console.log("specific his");
-//     console.log(historyRes);
-
-//   } catch (error) {
-//     console.error("Error fetching weather data:", error);
-
-//   }
-
-// }
-
-
 const searchUrl = "https://api.weatherapi.com/v1/search.json?key=89cc63fe3a254352b8d132020231609&q="
 
 const currentUrl = "https://api.weatherapi.com/v1/current.json?key=89cc63fe3a254352b8d132020231609&q="
@@ -184,9 +151,6 @@ const currentUrl = "https://api.weatherapi.com/v1/current.json?key=89cc63fe3a254
 const forecastUrl = "https://api.weatherapi.com/v1/forecast.json?key=89cc63fe3a254352b8d132020231609&days=6&q="
 
 const historyUrl = `https://api.weatherapi.com/v1/history.json?&dt=${formattedDate}&end_dt=${formattedDateToday}&key=89cc63fe3a254352b8d132020231609&q=`
-
-
-
 
 
 // ----------------------set current location--------------------------
@@ -202,10 +166,6 @@ function location1(){
     }).addTo(map);
 
     marker = L.marker([latitude, longitude]).addTo(map);
-    // const circle = L.circle([latitude, longitude], { radius: accuracy }).addTo(map);
-
-
-    // map.fitBounds(circle.getBounds());
     marker.setLatLng([latitude, longitude]).update();
     map.setView([latitude, longitude]);
 
@@ -214,7 +174,6 @@ function location1(){
       method : "GET",
       url : loca,
       success:(resp)=>{
-        // console.log(resp);
         cityName.text(resp.locality)
     
       }
@@ -229,7 +188,6 @@ function location1(){
 }
 
 location1();
-
 
 async function getLocation(latitude,longitude){
   const lat = latitude;
@@ -257,16 +215,8 @@ async function getLocation(latitude,longitude){
   const imgHis = $("#imgHis");
   const displayDivHistory = document.querySelector("#display-div-history");
 
-// document.getElementById("btnSelectDate").addEventListener("click",()=>{
-
-//   })
-
 async function BtnSelectDateOnClick(){
  
-  // const searchbarValue = $("#searchbar-text");
-  // var searchbarTypedText = searchbarValue.val();
-  // city=searchbarTypedText;
-
   console.log(city);
 
   var inputDateValue = inputDate.value;
@@ -281,7 +231,6 @@ async function BtnSelectDateOnClick(){
     console.log("specific his");
     console.log(historyRes);
     weatherCondition.text(historyRes.forecast.forecastday[0].day.condition.text);
-    // console.log(historyRes.forecast.forecastday[0].day.condition.text);
     weatherAvgTemp.text(historyRes.forecast.forecastday[0].day.avgtemp_c+"℃");
     sunrise.text(historyRes.forecast.forecastday[0].astro.sunrise);
     sunset.text(historyRes.forecast.forecastday[0].astro.sunset);
@@ -525,10 +474,21 @@ let iconLocation = document.getElementById("iconLocation");
 let searchIcon = document.getElementById("secrch-icon");
 let searchbarText = document.getElementById("searchbar-text");
 
+let conditionHistory = document.getElementById("condition");
+let historyImage1 = document.getElementById("historyImage");
+let historyAvgTemp1 = document.getElementById("historyAvgTemp");
 
+let lblSunrise = document.getElementById("lblSunrise");
+let lblSunset = document.getElementById("lblSunset");
+let lblMaxTemp = document.getElementById("lblMaxTemp");
+let lblMinTemp = document.getElementById("lblMinTemp");
+let lblHumidityHistory = document.getElementById("lblHumidityHistory");
 
-
-
+let sunriseData = document.getElementById("sunrise");
+let sunsetData = document.getElementById("sunset");
+let maxTempData = document.getElementById("maxTemp");
+let minTempData = document.getElementById("minTemp");
+let humidData = document.getElementById("humid");
 
 let btnDark = document.getElementById("btnDark");
 
@@ -627,6 +587,21 @@ btnDark.addEventListener("click",()=>{
     historyDay5TempText.style.color = "#000";
     historyDay6TempText.style.color = "#000";
     historyDay7TempText.style.color = "#000";
+
+    conditionHistory.style.color = "#000";
+    historyImage1.style.color = "#000";
+    historyAvgTemp1.style.color = "#000";
+    lblSunrise.style.color = "#000";
+    lblSunset.style.color = "#000";
+    lblMaxTemp.style.color = "#000";
+    lblMinTemp.style.color = "#000";
+    lblHumidityHistory.style.color = "#000";
+
+    sunriseData.style.color = "#000";
+    sunsetData.style.color = "#000";
+    maxTempData.style.color = "#000";
+    minTempData.style.color = "#000";
+    humidData.style.color = "#000";
     
     btnLogin.style.color = "#000";
     currentLocTemp.style.color = "#000";
@@ -726,6 +701,19 @@ btnDark.addEventListener("click",()=>{
 
     preWeatherDetailsText.style.color = "#FFFFFF";
     historyText.style.color = "#FFFFFF";
+    historyImage1.style.color = "#FFFFFF";
+    historyAvgTemp1.style.color = "#FFFFFF";
+    lblSunrise.style.color = "#FFFFFF";
+    lblSunset.style.color = "#FFFFFF";
+    lblMaxTemp.style.color = "#FFFFFF";
+    lblMinTemp.style.color = "#FFFFFF";
+    lblHumidityHistory.style.color = "#FFFFFF";
+
+    sunriseData.style.color = "#FFFFFF";
+    sunsetData.style.color = "#FFFFFF";
+    maxTempData.style.color = "#FFFFFF";
+    minTempData.style.color = "#FFFFFF";
+    humidData.style.color = "#FFFFFF";
 
     historyDate1Text.style.color = "#FFFFFF";
     historyDate2Text.style.color = "#FFFFFF";
@@ -734,6 +722,8 @@ btnDark.addEventListener("click",()=>{
     historyDate5Text.style.color = "#FFFFFF";
     historyDate6Text.style.color = "#FFFFFF";
     historyDate7Text.style.color = "#FFFFFF";
+
+    conditionHistory.style.color = "#FFFFFF";
 
     historyDay1TempText.style.color = "#FFFFFF";
     historyDay2TempText.style.color = "#FFFFFF";

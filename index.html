@@ -31,11 +31,7 @@
                     <input id="searchbar-text" class="search-bar" type="text" placeholder="Search Location Here">
                     <i onclick="searchIconOnclick()" id="secrch-icon" class='bx bx-search-alt-2'></i>
                 </div>
-                <!-- <div class="alert">
-                    <label for="">No matching Location</label>
-                </div> -->
-
-
+              
                 <div class="weather-deatils">
                     <div class="location">
                         <div class="div-img"><label id="current-loc-temperarure" for="" class="temp">25℃</label><br>
@@ -263,7 +259,6 @@
         <section class="section4">
             <div class="section4-div">
                 <div class="map-d" id="map">
-                    <!-- <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63397.333762227034!2d79.88823614334623!3d6.729119718216145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae24616c169e7c3%3A0xd21e80c970651d56!2sPanadura!5e0!3m2!1sen!2slk!4v1695483871400!5m2!1sen!2slk" width="610" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p> -->
                 </div>
                 <div class="calender" id="div-calender">
                     <h3 id="history-text">History</h3>
@@ -287,41 +282,31 @@
                         <hr>
                         <table class="historyTbl2">
                             <tr class="histr">
-                                <td>Sunrise</td>
+                                <td id="lblSunrise">Sunrise</td>
                                 <td id="sunrise" class="hisTd">05.59 AM </td>
 
                             </tr>
                             <tr></tr>
 
                             <tr class="histr">
-                                <td>Sunset</td>
+                                <td id="lblSunset">Sunset</td>
                                 <td id="sunset" class="hisTd">06.02 PM</td>
 
                             </tr>
                             <tr class="histr">
-                                <td>Max temp</td>
+                                <td id="lblMaxTemp">Max temp</td>
                                 <td id="maxTemp" class="hisTd">29 ℃</td>
                             </tr>
                             <tr class="histr">
-                                <td>Min Temp</td>
+                                <td id="lblMinTemp">Min Temp</td>
                                 <td id="minTemp" class="hisTd">25 ℃</td>
                             </tr>
                             <tr class="histr">
-                                <td>Humidity</td>
+                                <td id="lblHumidityHistory">Humidity</td>
                                 <td id="humid" class="hisTd">82 %</td>
                             </tr>
                         </table>
                     </div>
-
-
-
-
-
-
-
-
-
-
                 </div>
             </div>
         </section>

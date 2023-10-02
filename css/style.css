@@ -983,6 +983,37 @@ label{
             width: 92%;
             margin-left: 3%;
         }
+        .historyTbl1 tr{
+            height: 50px;
+        }
+        .historyTbl1 td{
+            color: white;
+            font-size: 20px;
+            margin-left: 3%;
+            
+        }
+        .historyTbl2{
+            width: 100%;
+            margin-top: 3%;
+            padding-left: 5%;
+            padding-right: 5%;
+        }
+        .historyTbl2 td{
+            color: white;
+            font-size: 18px;
+           
+        }
+        .histr{
+            height: 30px;
+        }
+        .history-date{
+            font-size: 20px;
+            margin-left: 5%;
+            
+        }
+        .hisImg{
+            width: 40px;
+        }
     }
 }
 
