@@ -128,7 +128,7 @@ function searchIconOnclick(){
 
   $.ajax({
     method : "GET",
-    url : `http://api.weatherapi.com/v1/current.json?key=89cc63fe3a254352b8d132020231609 &q=${city}`,
+    url : `https://api.weatherapi.com/v1/current.json?key=89cc63fe3a254352b8d132020231609 &q=${city}`,
     success : (resp) => {
     console.log(resp);
     console.log(resp.current.temp_c +"℃");
@@ -198,7 +198,7 @@ function location1(){
 
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 19,
-      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(map);
 
     marker = L.marker([latitude, longitude]).addTo(map);
@@ -540,8 +540,8 @@ btnDark.addEventListener("click",()=>{
     divForecast.style.backgroundColor = "#FFFFFF";
     iconLocation.style.color = "#000";
     searchIcon.style.color = "#000";
-    btnDark.style.backgroundImage = "url(/assets/brightnessBlack.png)";
-    btnDark.src = "/assets/brightnessBlack.png";
+    btnDark.style.backgroundImage = "url(assets/brightnessBlack.png)";
+    btnDark.src = "assets/brightnessBlack.png";
 
     tdHighDiv1.style.backgroundColor = "#D9D9D9";
     tdHighDiv2.style.backgroundColor = "#D9D9D9";
