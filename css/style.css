@@ -80,7 +80,7 @@ body{
     margin-right: 3%;
     margin-top: 1%;
     padding: 4%;
-    background-image: url("../assets/night.jpg");
+    background-image: url("../assets/backgroundIMG.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     /* https://fpdl.in/uploads/20231001081815_[fpdl.in]_night-ocean-landscape-full-moon-stars-shine_107791-7397_medium.jpg */
@@ -270,16 +270,16 @@ label{
     /* margin-right: 3%; */
     /* margin-top: %; */
 }
-table tr{
+.forecast table tr{
     height: 100px;
 }
-table td{
+.forecast table td{
     color: white;
     /* padding: 1%; */
     padding-top: 3%;
     font-size: 20px;
 }
-table td img{
+.forecast table td img{
     width: 60px;
 }
 .forecast hr{
@@ -559,6 +559,39 @@ table td img{
     color: red;
 }
 
+.historyTbl1{
+    margin-top: 3%;
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.historyTbl1 tr{
+    height: 50px;
+}
+.historyTbl1 td{
+    color: white;
+    font-size: 25px;
+    margin-left: 3%;
+    
+}
+.historyTbl2{
+    width: 100%;
+    margin-top: 3%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.historyTbl2 td{
+    color: white;
+    font-size: 20px;
+   
+}
+.histr{
+    height: 40px;
+}
+.hisTd{
+    text-align: right;
+}
+
 @media (max-width: 1440px) {
     .section2{
         margin-top: 6%;
@@ -725,10 +758,10 @@ table td img{
             width: 100%;
             margin-left: 2%;
         }
-        table td{
+        .forecast table td{
             font-size: 16px;
         }
-        table td img{
+        .forecast table td img{
             width: 40px;
         }
         .date label{
@@ -888,9 +921,9 @@ table td img{
         }
         .weather-data{
             /* border: 1px solid white; */
-            width: 150px;
+            width: 280px;
             height: 250px;
-            margin-left: 25%;
+            /* margin-left: 25%; */
             margin-top: 2%;
             background: rgba(255, 255, 255, 0.17);
             box-shadow: 5px 8px 4px rgba(0, 0, 0, 0.25);
@@ -904,6 +937,7 @@ table td img{
             flex-direction: column;
         }
         .map{
+            margin-top: 150px;
             height: 300px;
             width: 90%;
             margin-left: 3%;
@@ -934,6 +968,7 @@ table td img{
             flex-direction: column;
         }
         .starter{
+            margin-top: 150px;
             width: 92%;
             margin-left: 3%;
         }

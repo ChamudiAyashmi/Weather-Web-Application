@@ -139,29 +139,29 @@ let historyDateLabel = document.getElementById("historyDateLabel");
 
 
 
- async function BtnSelectDateOnClick(){
-  const searchbarValue = $("#searchbar-text");
-  var searchbarTypedText = searchbarValue.val();
-  console.log(searchbarTypedText);
+//  async function BtnSelectDateOnClick(){
+//   const searchbarValue = $("#searchbar-text");
+//   var searchbarTypedText = searchbarValue.val();
+//   console.log(searchbarTypedText);
 
-  var inputDateValue = inputDate.value;
-  console.log(inputDateValue);
-  historyDateLabel.textContent=inputDateValue; 
+//   var inputDateValue = inputDate.value;
+//   console.log(inputDateValue);
+//   historyDateLabel.textContent=inputDateValue; 
 
-  try {
-    const historyRes = await $.ajax({
-      method: "GET",
-      url: `https://api.weatherapi.com/v1/history.json?dt=${inputDateValue}&key=89cc63fe3a254352b8d132020231609&q=${searchbarTypedText}`,
-    });
-    console.log("specific his");
-    console.log(historyRes);
+//   try {
+//     const historyRes = await $.ajax({
+//       method: "GET",
+//       url: `https://api.weatherapi.com/v1/history.json?dt=${inputDateValue}&key=89cc63fe3a254352b8d132020231609&q=${searchbarTypedText}`,
+//     });
+//     console.log("specific his");
+//     console.log(historyRes);
 
-  } catch (error) {
-    console.error("Error fetching weather data:", error);
+//   } catch (error) {
+//     console.error("Error fetching weather data:", error);
 
-  }
+//   }
 
-}
+// }
 
 
 const searchUrl = "https://api.weatherapi.com/v1/search.json?key=89cc63fe3a254352b8d132020231609&q="
@@ -216,8 +216,39 @@ async function getLocation(latitude,longitude){
   city = cityData[0].name;
   console.log("Current Location : "+city);
   setWeather(city);
-  // BtnSelectDateOnClick(city);
+  BtnSelectDateOnClick(city);
 }
+
+async function BtnSelectDateOnClick(currentCity){
+  var c = currentCity;
+  console.log("current city :"+c);
+
+  const searchbarValue = $("#searchbar-text");
+  var searchbarTypedText = searchbarValue.val();
+  console.log(searchbarTypedText);
+
+  var inputDateValue = inputDate.value;
+  console.log(inputDateValue);
+  historyDateLabel.textContent=inputDateValue; 
+
+  try {
+    console.log("current city :"+c);
+    const historyRes = await $.ajax({
+      method: "GET",
+      url: `https://api.weatherapi.com/v1/history.json?dt=${inputDateValue}&key=89cc63fe3a254352b8d132020231609&q=${c}`,
+    });
+    console.log("specific his");
+    console.log(historyRes);
+
+  } catch (error) {
+    console.error("Error fetching weather data:", error);
+
+  }
+
+}
+
+
+
 
 async function setWeather(cityName) {
   try {
@@ -569,7 +600,7 @@ btnDark.addEventListener("click",()=>{
 
   }else{
     document.body.style.backgroundColor = "#2B2D42";
-    themeChangeImg.style.backgroundImage="url('../assets/night.jpg')";
+    themeChangeImg.style.backgroundImage=url("../assets/backgroundIMG.jpg");
     divtodayHighlights.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
     iconLocation.style.color = "#FFFFFF";
     searchIcon.style.color = "#FFFFFF";
@@ -674,7 +705,7 @@ btnDark.addEventListener("click",()=>{
     calenderDateInput.style.backgroundColor = "#FFFFFF";
     btnSelectDate.style.backgroundColor = "#FFFFFF"; 
 
-    imgThermometer.src = "/assets/thermometer.png";
+    imgThermometer.src = "../assets/thermometer.png";
     imgHumidity.src = "/assets/humidity.png";
     imgWindy.src = "/assets/windy.png";
     imgUv.src = "/assets/rays (1).png";
