@@ -600,7 +600,7 @@ btnDark.addEventListener("click",()=>{
 
   }else{
     document.body.style.backgroundColor = "#2B2D42";
-    themeChangeImg.style.backgroundImage=url("../assets/backgroundIMG.jpg");
+    themeChangeImg.style.backgroundImage="url('../assets/backgroundIMG.jpg')";
     divtodayHighlights.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
     iconLocation.style.color = "#FFFFFF";
     searchIcon.style.color = "#FFFFFF";
@@ -705,7 +705,7 @@ btnDark.addEventListener("click",()=>{
     calenderDateInput.style.backgroundColor = "#FFFFFF";
     btnSelectDate.style.backgroundColor = "#FFFFFF"; 
 
-    imgThermometer.src = "../assets/thermometer.png";
+    imgThermometer.src = "/assets/thermometer.png";
     imgHumidity.src = "/assets/humidity.png";
     imgWindy.src = "/assets/windy.png";
     imgUv.src = "/assets/rays (1).png";
