@@ -639,12 +639,12 @@ btnDark.addEventListener("click",()=>{
     divCalender.style.backgroundColor = "#FFFFFF";
     calenderDateInput.style.backgroundColor = "#D9D9D9";
     btnSelectDate.style.backgroundColor = "#D9D9D9";
-    imgThermometer.src = "../assets/thermometerBlack.png";
-    imgHumidity.src = "/assets/humidityBlack.png";
-    imgWindy.src = "/assets/windyBlack.png";
-    imgUv.src = "/assets/raysBlack.png";
-    imgWitness.src = "/assets/witnessBlack.png";
-    imgBarometer.src = "/assets/barometerBlack.png";
+    imgThermometer.src = "assets/thermometerBlack.png";
+    imgHumidity.src = "assets/humidityBlack.png";
+    imgWindy.src = "assets/windyBlack.png";
+    imgUv.src = "assets/raysBlack.png";
+    imgWitness.src = "assets/witnessBlack.png";
+    imgBarometer.src = "assets/barometerBlack.png";
     
     modeSelector++;
 
@@ -654,7 +654,7 @@ btnDark.addEventListener("click",()=>{
     divtodayHighlights.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
     iconLocation.style.color = "#FFFFFF";
     searchIcon.style.color = "#FFFFFF";
-    btnDark.src = "/assets/brightness (3).png";
+    btnDark.src = "assets/brightness (3).png";
 
     divForecast.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
     tdHighDiv1.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
@@ -755,12 +755,12 @@ btnDark.addEventListener("click",()=>{
     calenderDateInput.style.backgroundColor = "#FFFFFF";
     btnSelectDate.style.backgroundColor = "#FFFFFF"; 
 
-    imgThermometer.src = "/assets/thermometer.png";
-    imgHumidity.src = "/assets/humidity.png";
-    imgWindy.src = "/assets/windy.png";
-    imgUv.src = "/assets/rays (1).png";
-    imgWitness.src = "/assets/witness.png";
-    imgBarometer.src = "/assets/barometer.png";
+    imgThermometer.src = "assets/thermometer.png";
+    imgHumidity.src = "assets/humidity.png";
+    imgWindy.src = "assets/windy.png";
+    imgUv.src = "assets/rays (1).png";
+    imgWitness.src = "assets/witness.png";
+    imgBarometer.src = "assets/barometer.png";
 
     modeSelector++;
 
