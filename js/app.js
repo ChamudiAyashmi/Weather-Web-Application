@@ -535,7 +535,7 @@ let btnDark = document.getElementById("btnDark");
 btnDark.addEventListener("click",()=>{
   if(modeSelector%2==0){
     document.body.style.backgroundColor = "#D9D9D9";
-    themeChangeImg.style.backgroundImage="url('../assets/morning_img.jpg')";
+    themeChangeImg.style.backgroundImage="url('assets/morning_img.jpg')";
     divtodayHighlights.style.backgroundColor = "#FFFFFF";
     divForecast.style.backgroundColor = "#FFFFFF";
     iconLocation.style.color = "#000";
@@ -650,7 +650,7 @@ btnDark.addEventListener("click",()=>{
 
   }else{
     document.body.style.backgroundColor = "#2B2D42";
-    themeChangeImg.style.backgroundImage="url('../assets/backgroundIMG.jpg')";
+    themeChangeImg.style.backgroundImage="url('assets/backgroundIMG.jpg')";
     divtodayHighlights.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
     iconLocation.style.color = "#FFFFFF";
     searchIcon.style.color = "#FFFFFF";
